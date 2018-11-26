@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="htpp://gwkm.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="htpp://gwkm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="htpp://gwkm.com/Imports">
+      <xsd:import schemaLocation="http://219.134.129.206:2004/Esam698Service?xsd=xsd0" namespace="htpp://gwkm.com" />
+      <xsd:import schemaLocation="http://219.134.129.206:2004/Esam698Service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://219.134.129.206:2004/Esam698Service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OOPESAM.Core" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEsam698Service_ConnectDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectDevice" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_ConnectDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_CloseDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseDevice" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_CloseDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_SetIp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetIp" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_SetIp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_CreateRand_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRand" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_CreateRand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_IdentityAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_IdentityAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_IdentityAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_IdentityAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_UserControl_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_UserControl" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_UserControl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_UserControlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterUpdate1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterUpdate1" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterUpdate1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterUpdate1Response" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterUpdate2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterUpdate2" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterUpdate2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterUpdate2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterElseUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterElseUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_ParameterElseUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_ParameterElseUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_InCreasePurse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_InCreasePurse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_InCreasePurse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_InCreasePurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_InintPurse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_InintPurse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_InintPurse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_InintPurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_DataClear1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_DataClear1" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_DataClear1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_DataClear1Response" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_DataClear2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_DataClear2" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_DataClear2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_DataClear2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_InfraredAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_InfraredAuth" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_InfraredAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_InfraredAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_MacCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_MacCheck" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_MacCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_MacCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_EncMacWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_EncMacWrite" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_EncMacWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_EncMacWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_MacWrite_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_MacWrite" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_MacWrite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_MacWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_EncForCompare_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_EncForCompare" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_EncForCompare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_EncForCompareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_DecreasePurse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_DecreasePurse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_DecreasePurse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_DecreasePurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_Preset_Card_InputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_Preset_Card" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Meter_Formal_Preset_Card_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Meter_Formal_Preset_CardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_InitSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_InitSession" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_InitSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_InitSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifySession_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifySession" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifySession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifySessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyReadData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyReadData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyReadData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyReadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyReportData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetResponseData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetResponseData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetResponseData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetResponseDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetSessionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetSessionData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetSessionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetSessionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyMeterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyMeterData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyMeterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyMeterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetGrpBrdCstData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetGrpBrdCstData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetGrpBrdCstData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetGrpBrdCstDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_SetESAMData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_SetESAMData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_SetESAMData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_SetESAMDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetESAMData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetESAMData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetESAMData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetESAMDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyESAMData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyESAMData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_VerifyESAMData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_VerifyESAMDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetPurseData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetPurseData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetPurseData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetPurseDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_EncForCompare_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_EncForCompare" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_EncForCompare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_EncForCompareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetMeterSetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetMeterSetData" />
+  </wsdl:message>
+  <wsdl:message name="IEsam698Service_Obj_Meter_Formal_GetMeterSetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obj_Meter_Formal_GetMeterSetDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEsam698Service">
+    <wsdl:operation name="ConnectDevice">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/ConnectDevice" message="tns:IEsam698Service_ConnectDevice_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/ConnectDeviceResponse" message="tns:IEsam698Service_ConnectDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseDevice">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/CloseDevice" message="tns:IEsam698Service_CloseDevice_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/CloseDeviceResponse" message="tns:IEsam698Service_CloseDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetIp">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/SetIp" message="tns:IEsam698Service_SetIp_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/SetIpResponse" message="tns:IEsam698Service_SetIp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRand">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/CreateRand" message="tns:IEsam698Service_CreateRand_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/CreateRandResponse" message="tns:IEsam698Service_CreateRand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_IdentityAuthentication">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_IdentityAuthentication" message="tns:IEsam698Service_Meter_Formal_IdentityAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_IdentityAuthenticationResponse" message="tns:IEsam698Service_Meter_Formal_IdentityAuthentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_UserControl">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_UserControl" message="tns:IEsam698Service_Meter_Formal_UserControl_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_UserControlResponse" message="tns:IEsam698Service_Meter_Formal_UserControl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_ParameterUpdate">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterUpdate" message="tns:IEsam698Service_Meter_Formal_ParameterUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterUpdateResponse" message="tns:IEsam698Service_Meter_Formal_ParameterUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_ParameterUpdate1">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterUpdate1" message="tns:IEsam698Service_Meter_Formal_ParameterUpdate1_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterUpdate1Response" message="tns:IEsam698Service_Meter_Formal_ParameterUpdate1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_ParameterUpdate2">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterUpdate2" message="tns:IEsam698Service_Meter_Formal_ParameterUpdate2_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterUpdate2Response" message="tns:IEsam698Service_Meter_Formal_ParameterUpdate2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_ParameterElseUpdate">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterElseUpdate" message="tns:IEsam698Service_Meter_Formal_ParameterElseUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_ParameterElseUpdateResponse" message="tns:IEsam698Service_Meter_Formal_ParameterElseUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_InCreasePurse">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_InCreasePurse" message="tns:IEsam698Service_Meter_Formal_InCreasePurse_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_InCreasePurseResponse" message="tns:IEsam698Service_Meter_Formal_InCreasePurse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_InintPurse">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_InintPurse" message="tns:IEsam698Service_Meter_Formal_InintPurse_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_InintPurseResponse" message="tns:IEsam698Service_Meter_Formal_InintPurse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_DataClear1">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_DataClear1" message="tns:IEsam698Service_Meter_Formal_DataClear1_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_DataClear1Response" message="tns:IEsam698Service_Meter_Formal_DataClear1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_DataClear2">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_DataClear2" message="tns:IEsam698Service_Meter_Formal_DataClear2_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_DataClear2Response" message="tns:IEsam698Service_Meter_Formal_DataClear2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_InfraredAuth">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_InfraredAuth" message="tns:IEsam698Service_Meter_Formal_InfraredAuth_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_InfraredAuthResponse" message="tns:IEsam698Service_Meter_Formal_InfraredAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_MacCheck">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_MacCheck" message="tns:IEsam698Service_Meter_Formal_MacCheck_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_MacCheckResponse" message="tns:IEsam698Service_Meter_Formal_MacCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_EncMacWrite">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_EncMacWrite" message="tns:IEsam698Service_Meter_Formal_EncMacWrite_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_EncMacWriteResponse" message="tns:IEsam698Service_Meter_Formal_EncMacWrite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_MacWrite">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_MacWrite" message="tns:IEsam698Service_Meter_Formal_MacWrite_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_MacWriteResponse" message="tns:IEsam698Service_Meter_Formal_MacWrite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_EncForCompare">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_EncForCompare" message="tns:IEsam698Service_Meter_Formal_EncForCompare_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_EncForCompareResponse" message="tns:IEsam698Service_Meter_Formal_EncForCompare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_DecreasePurse">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_DecreasePurse" message="tns:IEsam698Service_Meter_Formal_DecreasePurse_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_DecreasePurseResponse" message="tns:IEsam698Service_Meter_Formal_DecreasePurse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Meter_Formal_Preset_Card">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_Preset_Card" message="tns:IEsam698Service_Meter_Formal_Preset_Card_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Meter_Formal_Preset_CardResponse" message="tns:IEsam698Service_Meter_Formal_Preset_Card_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_InitSession">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_InitSession" message="tns:IEsam698Service_Obj_Meter_Formal_InitSession_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_InitSessionResponse" message="tns:IEsam698Service_Obj_Meter_Formal_InitSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_VerifySession">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifySession" message="tns:IEsam698Service_Obj_Meter_Formal_VerifySession_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifySessionResponse" message="tns:IEsam698Service_Obj_Meter_Formal_VerifySession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_VerifyReadData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyReadData" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyReadData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyReadDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyReadData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_VerifyReportData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyReportData" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyReportData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyReportDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_GetResponseData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetResponseData" message="tns:IEsam698Service_Obj_Meter_Formal_GetResponseData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetResponseDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_GetResponseData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_GetSessionData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetSessionData" message="tns:IEsam698Service_Obj_Meter_Formal_GetSessionData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetSessionDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_GetSessionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_VerifyMeterData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyMeterData" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyMeterData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyMeterDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyMeterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_GetGrpBrdCstData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetGrpBrdCstData" message="tns:IEsam698Service_Obj_Meter_Formal_GetGrpBrdCstData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetGrpBrdCstDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_GetGrpBrdCstData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_SetESAMData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_SetESAMData" message="tns:IEsam698Service_Obj_Meter_Formal_SetESAMData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_SetESAMDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_SetESAMData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_GetESAMData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetESAMData" message="tns:IEsam698Service_Obj_Meter_Formal_GetESAMData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetESAMDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_GetESAMData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_VerifyESAMData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyESAMData" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyESAMData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_VerifyESAMDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_VerifyESAMData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_GetPurseData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetPurseData" message="tns:IEsam698Service_Obj_Meter_Formal_GetPurseData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetPurseDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_GetPurseData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_EncForCompare">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_EncForCompare" message="tns:IEsam698Service_Obj_Meter_Formal_EncForCompare_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_EncForCompareResponse" message="tns:IEsam698Service_Obj_Meter_Formal_EncForCompare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obj_Meter_Formal_GetMeterSetData">
+      <wsdl:input wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetMeterSetData" message="tns:IEsam698Service_Obj_Meter_Formal_GetMeterSetData_InputMessage" />
+      <wsdl:output wsaw:Action="htpp://gwkm.com/IEsam698Service/Obj_Meter_Formal_GetMeterSetDataResponse" message="tns:IEsam698Service_Obj_Meter_Formal_GetMeterSetData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

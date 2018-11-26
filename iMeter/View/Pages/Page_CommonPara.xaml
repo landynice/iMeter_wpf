@@ -1,0 +1,272 @@
+﻿<Page x:Class="iMeter.View.Pages.Page_CommonPara"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:iMeter.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="880"
+      Title="Page_CommonPara">
+
+    <Grid local:GridHelper.ShowBorder="True">
+        <Grid.Resources>
+            <Style TargetType="CheckBox">
+                <Setter Property="Width" Value="130"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+            <!--“读”按钮-->
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Template" Value="{StaticResource DefaultButton}"/>
+                <Setter Property="Content" Value="读"/>
+                <Setter Property="Command" Value="{Binding BtnRead}"/>
+            </Style>
+            <!--“设”按钮-->
+            <Style TargetType="Button" x:Key="SetBtn">
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Template" Value="{StaticResource ButtonPink}"/>
+                <Setter Property="Content" Value="写"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!--第0列-->
+        <CheckBox Grid.Row="0" Grid.Column="0" Content="日期"/>
+        <CheckBox Grid.Row="1" Grid.Column="0" Content="时间"/>
+        <CheckBox Grid.Row="2" Grid.Column="0" Content="表号"/>
+        <CheckBox Grid.Row="3" Grid.Column="0" Content="年时区数"/>
+        <CheckBox Grid.Row="4" Grid.Column="0" Content="日时段表数"/>
+        <CheckBox Grid.Row="5" Grid.Column="0" Content="日时段数"/>
+        <CheckBox Grid.Row="6" Grid.Column="0" Content="费率数"/>
+        <CheckBox Grid.Row="7" Grid.Column="0" Content="每月第1结算日"/>
+        <CheckBox Grid.Row="8" Grid.Column="0" Content="每月第2结算日"/>
+        <CheckBox Grid.Row="9" Grid.Column="0" Content="每月第3结算日"/>
+        <CheckBox Grid.Row="10" Grid.Column="0" Content="时区表切换时间"/>
+        <CheckBox Grid.Row="11" Grid.Column="0" Content="日时段表切换时间"/>
+        <CheckBox Grid.Row="12" Grid.Column="0" Content="阶梯切换时间"/>
+        <CheckBox Grid.Row="13" Grid.Column="0" Content="有功组合方式特征字"/>
+        <CheckBox Grid.Row="14" Grid.Column="0" Content="红外波特率特征字"/>
+        <!--第1列-->
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Ret}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Ret2}"/>
+        <TextBox Grid.Row="2" Grid.Column="1"/>
+        <TextBox Grid.Row="3" Grid.Column="1"/>
+        <TextBox Grid.Row="4" Grid.Column="1"/>
+        <TextBox Grid.Row="5" Grid.Column="1"/>
+        <TextBox Grid.Row="6" Grid.Column="1"/>
+        <TextBox Grid.Row="7" Grid.Column="1"/>
+        <TextBox Grid.Row="8" Grid.Column="1"/>
+        <TextBox Grid.Row="9" Grid.Column="1"/>
+        <TextBox Grid.Row="10" Grid.Column="1"/>
+        <TextBox Grid.Row="11" Grid.Column="1"/>
+        <TextBox Grid.Row="12" Grid.Column="1"/>
+        <TextBox Grid.Row="13" Grid.Column="1"/>
+        <TextBox Grid.Row="14" Grid.Column="1"/>
+        <!--第2列-->
+        <Button Grid.Row="0" Grid.Column="2" CommandParameter="04000101"/>
+        <Button Grid.Row="1" Grid.Column="2" CommandParameter="04000102"/>
+        <Button Grid.Row="2" Grid.Column="2"/>
+        <Button Grid.Row="3" Grid.Column="2"/>
+        <Button Grid.Row="4" Grid.Column="2"/>
+        <Button Grid.Row="5" Grid.Column="2"/>
+        <Button Grid.Row="6" Grid.Column="2"/>
+        <Button Grid.Row="7" Grid.Column="2"/>
+        <Button Grid.Row="8" Grid.Column="2"/>
+        <Button Grid.Row="9" Grid.Column="2"/>
+        <Button Grid.Row="10" Grid.Column="2"/>
+        <Button Grid.Row="11" Grid.Column="2"/>
+        <Button Grid.Row="12" Grid.Column="2"/>
+        <Button Grid.Row="13" Grid.Column="2"/>
+        <Button Grid.Row="14" Grid.Column="2"/>
+        <!--第3列-->
+        <Button Grid.Row="0" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="5" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="6" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="7" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="8" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="9" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="10" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="11" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="12" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="13" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="14" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <!--第4列-->
+        <Border Grid.RowSpan="15" Grid.Column="4" Background="Black" Margin="5,0"/>
+        <!--第5列-->
+        <CheckBox Grid.Row="0" Grid.Column="5" Content="公共假日数"/>
+        <CheckBox Grid.Row="1" Grid.Column="5" Content="阶梯数"/>
+        <CheckBox Grid.Row="2" Grid.Column="5" Content="自动循环显示屏数"/>
+        <CheckBox Grid.Row="3" Grid.Column="5" Content="每屏显示时间"/>
+        <CheckBox Grid.Row="4" Grid.Column="5" Content="显示电能小数位数"/>
+        <CheckBox Grid.Row="5" Grid.Column="5" Content="显示功率小数位数"/>
+        <CheckBox Grid.Row="6" Grid.Column="5" Content="按键循环显示屏数"/>
+        <CheckBox Grid.Row="7" Grid.Column="5" Content="客户编号"/>
+        <CheckBox Grid.Row="8" Grid.Column="5" Content="整点冻结起始时间"/>
+        <CheckBox Grid.Row="9" Grid.Column="5" Content="整点冻结时间间隔"/>
+        <CheckBox Grid.Row="10" Grid.Column="5" Content="日冻结时间"/>
+        <CheckBox Grid.Row="11" Grid.Column="5" Content="跳闸延时时间"/>
+        <CheckBox Grid.Row="12" Grid.Column="5" Content="校表脉冲宽度"/>
+        <CheckBox Grid.Row="13" Grid.Column="5" Content="周休日特征字"/>
+        <CheckBox Grid.Row="14" Grid.Column="5" Content="周休日采用日时段表号"/>
+        <!--第6列-->
+        <TextBox Grid.Row="0" Grid.Column="6"/>
+        <TextBox Grid.Row="1" Grid.Column="6"/>
+        <TextBox Grid.Row="2" Grid.Column="6"/>
+        <TextBox Grid.Row="3" Grid.Column="6"/>
+        <TextBox Grid.Row="4" Grid.Column="6"/>
+        <TextBox Grid.Row="5" Grid.Column="6"/>
+        <TextBox Grid.Row="6" Grid.Column="6"/>
+        <TextBox Grid.Row="7" Grid.Column="6"/>
+        <TextBox Grid.Row="8" Grid.Column="6"/>
+        <TextBox Grid.Row="9" Grid.Column="6"/>
+        <TextBox Grid.Row="10" Grid.Column="6"/>
+        <TextBox Grid.Row="11" Grid.Column="6"/>
+        <TextBox Grid.Row="12" Grid.Column="6"/>
+        <TextBox Grid.Row="13" Grid.Column="6"/>
+        <TextBox Grid.Row="14" Grid.Column="6"/>
+        <!--第7列-->
+        <Button Grid.Row="0" Grid.Column="7"/>
+        <Button Grid.Row="1" Grid.Column="7"/>
+        <Button Grid.Row="2" Grid.Column="7"/>
+        <Button Grid.Row="3" Grid.Column="7"/>
+        <Button Grid.Row="4" Grid.Column="7"/>
+        <Button Grid.Row="5" Grid.Column="7"/>
+        <Button Grid.Row="6" Grid.Column="7"/>
+        <Button Grid.Row="7" Grid.Column="7"/>
+        <Button Grid.Row="8" Grid.Column="7"/>
+        <Button Grid.Row="9" Grid.Column="7"/>
+        <Button Grid.Row="10" Grid.Column="7"/>
+        <Button Grid.Row="11" Grid.Column="7"/>
+        <Button Grid.Row="12" Grid.Column="7"/>
+        <Button Grid.Row="13" Grid.Column="7"/>
+        <Button Grid.Row="14" Grid.Column="7"/>
+        <!--第8列-->
+        <Button Grid.Row="0" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="1" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="2" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="3" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="4" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="5" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="6" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="7" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="8" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="9" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="10" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="11" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="12" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="13" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="14" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <!--第9列-->
+        <Border Grid.RowSpan="15" Grid.Column="9" Background="Black" Margin="5,0"/>
+        <!--第10列-->
+        <CheckBox Grid.Row="0" Grid.Column="10" Content="定时冻结模式字"/>
+        <CheckBox Grid.Row="1" Grid.Column="10" Content="瞬时冻结模式字"/>
+        <CheckBox Grid.Row="2" Grid.Column="10" Content="约定冻结模式字"/>
+        <CheckBox Grid.Row="3" Grid.Column="10" Content="整点冻结模式字"/>
+        <CheckBox Grid.Row="4" Grid.Column="10" Content="日冻结模式字"/>
+        <CheckBox Grid.Row="5" Grid.Column="10" Content="电表运行特征字1"/>
+        <CheckBox Grid.Row="6" Grid.Column="10" Content="电表有功常数"/>
+        <CheckBox Grid.Row="7" Grid.Column="10" Content="额定电压(ASCII)"/>
+        <CheckBox Grid.Row="8" Grid.Column="10" Content="额定电流(ASCII)"/>
+        <CheckBox Grid.Row="9" Grid.Column="10" Content="最大电流(ASCII)"/>
+        <CheckBox Grid.Row="10" Grid.Column="10" Content="电表型号(ASCII)"/>
+        <CheckBox Grid.Row="11" Grid.Column="10" Content="生产日期(ASCII)"/>
+        <CheckBox Grid.Row="12" Grid.Column="10" Content="有功准确度等级(ASCII)"/>
+        <CheckBox Grid.Row="13" Grid.Column="10" Content="周休日特征字"/>
+        <CheckBox Grid.Row="14" Grid.Column="10" Content="周休日采用日时段表号"/>
+        <!--第11列-->
+        <TextBox Grid.Row="0" Grid.Column="11"/>
+        <TextBox Grid.Row="1" Grid.Column="11"/>
+        <TextBox Grid.Row="2" Grid.Column="11"/>
+        <TextBox Grid.Row="3" Grid.Column="11"/>
+        <TextBox Grid.Row="4" Grid.Column="11"/>
+        <TextBox Grid.Row="5" Grid.Column="11"/>
+        <TextBox Grid.Row="6" Grid.Column="11"/>
+        <TextBox Grid.Row="7" Grid.Column="11"/>
+        <TextBox Grid.Row="8" Grid.Column="11"/>
+        <TextBox Grid.Row="9" Grid.Column="11"/>
+        <TextBox Grid.Row="10" Grid.Column="11"/>
+        <TextBox Grid.Row="11" Grid.Column="11"/>
+        <TextBox Grid.Row="12" Grid.Column="11"/>
+        <TextBox Grid.Row="13" Grid.Column="11"/>
+        <TextBox Grid.Row="14" Grid.Column="11"/>
+        <!--第12列-->
+        <Button Grid.Row="0" Grid.Column="12"/>
+        <Button Grid.Row="1" Grid.Column="12"/>
+        <Button Grid.Row="2" Grid.Column="12"/>
+        <Button Grid.Row="3" Grid.Column="12"/>
+        <Button Grid.Row="4" Grid.Column="12"/>
+        <Button Grid.Row="5" Grid.Column="12"/>
+        <Button Grid.Row="6" Grid.Column="12"/>
+        <Button Grid.Row="7" Grid.Column="12"/>
+        <Button Grid.Row="8" Grid.Column="12"/>
+        <Button Grid.Row="9" Grid.Column="12"/>
+        <Button Grid.Row="10" Grid.Column="12"/>
+        <Button Grid.Row="11" Grid.Column="12"/>
+        <Button Grid.Row="12" Grid.Column="12"/>
+        <Button Grid.Row="13" Grid.Column="12"/>
+        <Button Grid.Row="14" Grid.Column="12"/>
+        <!--第13列-->
+        <Button Grid.Row="0" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="1" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="2" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="3" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="4" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="5" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="6" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="7" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="8" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="9" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="10" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="11" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="12" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="13" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="14" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <!--<StackPanel>
+            <Button Command="{Binding btnTest}" Content="test"/>
+            <TextBox Text="{Binding Ret}"/>
+        </StackPanel>-->
+    </Grid>
+</Page>

@@ -1,0 +1,99 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type Border}" x:Key="BorderStyle">
+        <Setter Property="Background" Value="#F5F8F8"/>
+        <Setter Property="BorderBrush" Value="#9FB2B8"/>
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>
+        <!--圆角-->
+        <Setter Property="CornerRadius" Value="5"/>
+    </Style>
+    <Style TargetType="{x:Type GroupBox}" x:Key="GroupBoxStyle">
+        <Setter Property="Background" Value="#F5F8F8"/>
+        <Setter Property="BorderBrush" Value="#9FB2B8"/>
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>
+    </Style>
+    <Style x:Key="TitleBackground_Border_Style" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.40085536547433903,0"
+                                     EndPoint="0.40085536547433903,1.1625">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FF63a1da"
+                                          Offset="0" />
+                            <GradientStop Color="#FF4582c6"
+                                          Offset="0.9833329916000366" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ChirdrenControlTitleBackground_Border_Style" TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+        <Setter Property="BorderBrush" Value="#4f983d"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush
+				StartPoint="0.45734912891106067,-0.016132970010080645"
+				EndPoint="0.45734912891106067,1.2111304498487903">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop
+							Color="#FF9dd491"
+							Offset="0" />
+                            <GradientStop
+							Color="#FF5fb64a"
+							Offset="0.9888889789581299" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ListBoxItemNormalBackground_Border_Style" TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="BorderBrush" Value="#E1E1E1"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FFffffff"
+                                          Offset="0" />
+                            <GradientStop Color="#FFE4E4E4"
+                                          Offset="0.96" />
+                            <GradientStop Color="#FFe4e4e4"
+                                          Offset="1" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="#9e9e9e" 
+                                  Direction="315"  
+                                  ShadowDepth="3" 
+                                  Opacity="1" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ListBoxItemHeadBackground_Border_Style" TargetType="{x:Type Border}">
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="Background" Value="Green" />
+    </Style>
+    <Style x:Key="DataGridBorderThickness_Border_Style" TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="1"  />
+        <Setter Property="BorderBrush" Value="#9FB2B8"/>
+    </Style>
+    <Style x:Key="borderStyle" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#F5F8F8"></Setter>
+        <Setter Property="BorderBrush" Value="#9FB2B8"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="BorderThickness" Value="1,1,1,1"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
+    </Style>
+</ResourceDictionary>

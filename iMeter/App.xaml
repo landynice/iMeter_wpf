@@ -1,0 +1,23 @@
+﻿<Application x:Class="iMeter.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:iMeter"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/TabControlStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/StatusBarStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/TextBlockStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/IconStyles.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/FontStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/BorderStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/GroupboxStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/CheckBoxStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

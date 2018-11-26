@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8b40679-3020-4cb0-b403-ddbadfa3169f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://219.134.129.206:2004/Esam698Service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Esam698Service.xsd" MetadataType="Schema" ID="7d5b01b5-4bd6-4f64-b047-4c1399a44591" SourceId="1" SourceUrl="http://219.134.129.206:2004/Esam698Service?xsd=xsd2" />
+    <MetadataFile FileName="Esam698Service.wsdl" MetadataType="Wsdl" ID="73b68ea5-19b9-4f82-a803-c1d4b409c89d" SourceId="1" SourceUrl="http://219.134.129.206:2004/Esam698Service?wsdl" />
+    <MetadataFile FileName="Esam698Service1.xsd" MetadataType="Schema" ID="58ae5f9e-ca40-49fa-97b9-dffee743d339" SourceId="1" SourceUrl="http://219.134.129.206:2004/Esam698Service?xsd=xsd0" />
+    <MetadataFile FileName="Esam698Service2.xsd" MetadataType="Schema" ID="2a0bcc6d-05c3-4b8c-8d8f-63da25f64077" SourceId="1" SourceUrl="http://219.134.129.206:2004/Esam698Service?xsd=xsd1" />
+    <MetadataFile FileName="Esam698Service1.wsdl" MetadataType="Wsdl" ID="653f48f3-3891-49e5-8dec-3168195810b4" SourceId="1" SourceUrl="http://219.134.129.206:2004/Esam698Service?wsdl=wsdl0" />
+    <MetadataFile FileName="Esam698Service.disco" MetadataType="Disco" ID="ea4015d1-0f18-4d5f-99b3-89a540a9362b" SourceId="1" SourceUrl="http://219.134.129.206:2004/Esam698Service?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

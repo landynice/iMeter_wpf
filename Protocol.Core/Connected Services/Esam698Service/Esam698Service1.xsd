@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="htpp://gwkm.com" elementFormDefault="qualified" targetNamespace="htpp://gwkm.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://219.134.129.206:2004/Esam698Service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OOPESAM.Core" />
+  <xs:element name="ConnectDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PutIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutPort" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutCtime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConnectDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="ConnectDeviceResult" nillable="true" type="q1:EsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseDevice">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="CloseDeviceResult" nillable="true" type="q2:EsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetIp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PutIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutPort" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutCtime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetIpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="SetIpResult" nillable="true" type="q3:EsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InRandLen" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="CreateRandResult" nillable="true" type="q4:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_IdentityAuthentication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_IdentityAuthenticationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_IdentityAuthenticationResult" nillable="true" type="q5:IdentityAuthenticationState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_UserControl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutEsamNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_UserControlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_UserControlResult" nillable="true" type="q6:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutApdu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_ParameterUpdateResult" nillable="true" type="q7:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterUpdate1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutApdu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterUpdate1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_ParameterUpdate1Result" nillable="true" type="q8:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterUpdate2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutApdu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterUpdate2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_ParameterUpdate2Result" nillable="true" type="q9:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterElseUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutApdu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_ParameterElseUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_ParameterElseUpdateResult" nillable="true" type="q10:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_InCreasePurse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_InCreasePurseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_InCreasePurseResult" nillable="true" type="q11:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_InintPurse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_InintPurseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_InintPurseResult" nillable="true" type="q12:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_DataClear1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_DataClear1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_DataClear1Result" nillable="true" type="q13:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_DataClear2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="counter" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_DataClear2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_DataClear2Result" nillable="true" type="q14:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_InfraredAuth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutEsamNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutRand1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutRand1Endata" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutRand2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_InfraredAuthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_InfraredAuthResult" nillable="true" type="q15:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_MacCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutApdu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutMac" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_MacCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_MacCheckResult" nillable="true" type="q16:EsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_EncMacWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutEsamNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutFileID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDataBegin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_EncMacWriteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_EncMacWriteResult" nillable="true" type="q17:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_MacWrite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutEsamNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutFileID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDataBegin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_MacWriteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_MacWriteResult" nillable="true" type="q18:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_EncForCompare">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PutKeyid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_EncForCompareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_EncForCompareResult" nillable="true" type="q19:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_DecreasePurse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flag" type="xs:int" />
+        <xs:element minOccurs="0" name="PutRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_DecreasePurseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_DecreasePurseResult" nillable="true" type="q20:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_Preset_Card">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PutData1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PutData5" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Meter_Formal_Preset_CardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Meter_Formal_Preset_CardResult" nillable="true" type="q21:EsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_InitSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="cDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cASCTR" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cFLG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_InitSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_InitSessionResult" nillable="true" type="q22:InitSessionState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifySession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="cDiv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cRandHost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSessionData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSign" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifySessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_VerifySessionResult" nillable="true" type="q23:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyReadData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cMeterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cRandHost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cReadData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cMac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cOutData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyReadDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_VerifyReadDataResult" nillable="true" type="q24:EsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cMeterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cRandT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cReportData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cMac" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_VerifyReportDataResult" nillable="true" type="q25:VerifyReportDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetResponseData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cMeterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RandHost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cReportData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetResponseDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_GetResponseDataResult" nillable="true" type="q26:GetResponseDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetSessionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSessionKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cTaskType" type="xs:int" />
+        <xs:element minOccurs="0" name="cTaskData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetSessionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_GetSessionDataResult" nillable="true" type="q27:GetResponseDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyMeterData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSessionKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cTaskData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cMac" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyMeterDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_VerifyMeterDataResult" nillable="true" type="q28:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetGrpBrdCstData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cBrdCstAddr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AGSEQ" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cBrdCstData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetGrpBrdCstDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_GetGrpBrdCstDataResult" nillable="true" type="q29:GetResponseDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_SetESAMData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="InOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSessionKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cMeterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cESAMRand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_SetESAMDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_SetESAMDataResult" nillable="true" type="q30:GetResponseDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetESAMData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cMeterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cOAD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetESAMDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_GetESAMDataResult" nillable="true" type="q31:GetESAMDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyESAMData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cMeterNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cRandHost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cOAD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cTaskData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cMAC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_VerifyESAMDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_VerifyESAMDataResult" nillable="true" type="q32:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetPurseData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSessionKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cTaskType" type="xs:int" />
+        <xs:element minOccurs="0" name="cTaskData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetPurseDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_GetPurseDataResult" nillable="true" type="q33:GetResponseDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_EncForCompare">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iKeyState" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cDIV" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cKeyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_EncForCompareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_EncForCompareResult" nillable="true" type="q34:OneDataEsamState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetMeterSetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iOperateMode" type="xs:int" />
+        <xs:element minOccurs="0" name="cESAMNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cSessionKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cTaskData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obj_Meter_Formal_GetMeterSetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/OOPESAM.Core" minOccurs="0" name="Obj_Meter_Formal_GetMeterSetDataResult" nillable="true" type="q35:GetResponseDataState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,228 @@
+﻿<Window x:Class="iMeter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Closing="WinClosing"
+        Title="iMeter" Height="710" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu DockPanel.Dock="Top" Grid.Row="0" Background="LightSkyBlue">
+            <MenuItem Header="文件">
+                <MenuItem Name="menuClose" Header="关闭" Click="menuClose_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="更改波特率">
+                <MenuItem Name="menuChange2400" Header="2400" Click="menuChange2400_Click"/>
+                <MenuItem Name="menuChange9600"  Header="9600" Click="menuChange9600_Click"/>
+            </MenuItem>
+            <MenuItem Header="帮助">
+                <MenuItem Header="关于"/>
+            </MenuItem>
+        </Menu>
+
+        <ToolBar Grid.Row="1" Background="LightSkyBlue">
+            <Button x:Name="btnSetAddr" Click="btnSetAddr_Click"
+                    FontSize="18" Margin="5,0" Content="写表地址"
+                    Template="{StaticResource ButtonPink}"/>
+            <TextBox x:Name="tbAddr" 
+                     Width="150" MaxLength="12" HorizontalContentAlignment="Center" 
+                     Style="{StaticResource TxbTrigger}" Tag="请先读表地址..."/>
+            <Button x:Name="btnReadAddr" Click="btnReadAddr_Click" 
+                    FontSize="18" Margin="5,0" Content="读表地址"
+                    Template="{StaticResource DefaultButton}"/>
+
+            <Label Margin="100,0,0,0">串口:</Label>
+            <ComboBox x:Name="cbPort" MinWidth="60"></ComboBox>
+            <Label Margin="10,0,0,0">波特率:</Label>
+            <ComboBox x:Name="cbBaudRate" MinWidth="60">
+                <ComboBoxItem>1200</ComboBoxItem>
+                <ComboBoxItem>2400</ComboBoxItem>
+                <ComboBoxItem>4800</ComboBoxItem>
+                <ComboBoxItem>9600</ComboBoxItem>
+            </ComboBox>
+            <Label Margin="10,0,0,0">操作者代码:</Label>
+            <TextBox x:Name="tbOprCode" MinWidth="70" MaxLength="8" HorizontalContentAlignment="Center">12345678</TextBox>
+            <Label Margin="10,0,0,0">密码:</Label>
+            <TextBox x:Name="tbPsw" MinWidth="70" MaxLength="8" HorizontalContentAlignment="Center">12345602</TextBox>
+        </ToolBar>
+
+        <Grid Grid.Row="2">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                    <StackPanel.LayoutTransform>
+                        <RotateTransform Angle="90" />
+                    </StackPanel.LayoutTransform>
+                    <Button x:Name="btn645"
+                            Content="645协议"
+                            MouseEnter="btn645_MouseEnter" />
+                    <Button x:Name="btn698"
+                            Margin="2,0"
+                            Content="698协议"
+                            MouseEnter="btn698_MouseEnter" />
+                    <Button x:Name="btnToolbox"
+                            Content="工具箱"/>
+                </StackPanel>
+
+                <Grid Grid.IsSharedSizeScope="True">
+
+                    <Grid x:Name="layer0Grid"
+                          Panel.ZIndex="0"
+                          MouseEnter="layer0Grid_MouseEnter">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="70"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Frame x:Name="PageContext" Grid.Row="0" NavigationUIVisibility="Visible" 
+                               Source="View/Pages/Page_CommonPara.xaml">
+                            <Frame.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="DarkSeaGreen"  Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                        </Frame>
+
+                        <GridSplitter Height="3" 
+                                      HorizontalAlignment="Stretch" 
+                                      VerticalAlignment="Bottom"/>
+
+                        <Border Grid.Row="1">
+                            <RichTextBox x:Name="richMsg" Background="LightGoldenrodYellow"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid x:Name="P645LayerGrid" Visibility="Collapsed">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="P645Group"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <GridSplitter Grid.Column="1"
+                                      Width="3"
+                                      HorizontalAlignment="Left" />
+                        
+                        <Grid x:Name="P645Grid"
+                              Grid.Column="1"
+                              Margin="3,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid Background="LightBlue">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="35" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock VerticalAlignment="Center"
+                                            FontSize="18"
+                                            Text="645协议"
+                                            TextTrimming="CharacterEllipsis" />
+                                <Button x:Name="P645LayerPinButton"
+                                        Grid.Column="1"
+                                        Click="P645LayerPinButton_Click">
+                                    <Image x:Name="toolboxImage"
+                                            Width="24"
+                                            Height="24"
+                                            Source="Resources/Images/9416.png" />
+                                </Button>
+                            </Grid>
+                            <ListBox Grid.Row="1" FontSize="12">
+                                <ListBoxItem Content="常用参数" />
+                                <ListBoxItem Content="多项读写/显示" />
+                                <ListBoxItem Content="特殊命令" />
+                                <ListBoxItem Content="ESAM/费控" />
+                                <ListBoxItem Content="状态字/模式字/特征字" />
+                                <ListBoxItem Content="时区时段测试" />
+                                <ListBoxItem Content="广播校时测试" />
+                                <ListBoxItem Content="事件测试" />
+                                <ListBoxItem Content="冻结测试" />
+                                <ListBoxItem Content="电量测试" />
+                                <ListBoxItem Content="读数据" />
+                                <ListBoxItem Content="多次读取" />
+                            </ListBox>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid x:Name="P698LayerGrid" Visibility="Collapsed">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="P698Group"/>
+                        </Grid.ColumnDefinitions>
+
+                        <GridSplitter Grid.Column="1"
+                                      Width="3"
+                                      HorizontalAlignment="Left" />
+                        
+                        <Grid x:Name="P698Grid"
+                                Grid.Column="1"
+                                Margin="3,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid Background="LightBlue">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="35" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock VerticalAlignment="Center"
+                                            FontSize="18"
+                                            Text="698协议"
+                                            TextTrimming="CharacterEllipsis" />
+                                <Button x:Name="P698LayerPinButton"
+                                        Grid.Column="1"
+                                        Click="P698LayerPinButton_Click">
+                                    <Image x:Name="solutionImage"
+                                            Width="24"
+                                            Height="24"
+                                            Source="Resources/Images/9416.png"/>
+                                </Button>
+                            </Grid>
+
+                            <Border Grid.Row="1" Background="White">
+                                <ToolBar>
+                                    <Image Source="Resources/Images/9416.png" />
+                                    <Image Margin="2,0" Source="Resources/Images/9416.png" />
+                                    <Image Margin="2,0" Source="Resources/Images/9416.png" />
+                                </ToolBar>
+                            </Border>
+
+                            <TreeView Grid.Row="2">
+                                <TreeViewItem Header="My Solution">
+                                    <TreeViewItem Header="Project #1" />
+                                    <TreeViewItem Header="Project #2" />
+                                    <TreeViewItem Header="Project #3" />
+                                </TreeViewItem>
+                            </TreeView>
+
+                        </Grid>
+                        
+                        
+                    </Grid>
+                </Grid>
+
+            </DockPanel>
+        </Grid>
+
+        <StatusBar Grid.Row="3">
+            <StatusBarItem Foreground="Gray" Margin="0,0,8,0" HorizontalAlignment="Right"
+                           Content="软件版本：1.0.0.0"/>
+            <StatusBarItem Name="SbiCurrentTime" Foreground="DodgerBlue" Margin="0,0,8,0" HorizontalAlignment="Right"/>
+        </StatusBar>
+    </Grid>
+</Window>

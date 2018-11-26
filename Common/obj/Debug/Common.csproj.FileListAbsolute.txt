@@ -1,0 +1,12 @@
+E:\C#\iMeter_wpf20181105\PublicFunction\bin\Debug\PublicFunction.dll
+E:\C#\iMeter_wpf20181105\PublicFunction\bin\Debug\PublicFunction.pdb
+E:\C#\iMeter_wpf20181105\PublicFunction\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\C#\iMeter_wpf20181105\PublicFunction\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\C#\iMeter_wpf20181105\PublicFunction\obj\Debug\PublicFunction.dll
+E:\C#\iMeter_wpf20181105\PublicFunction\obj\Debug\PublicFunction.pdb
+E:\C#\iMeter_wpf20181105\Common\bin\Debug\Common.dll
+E:\C#\iMeter_wpf20181105\Common\bin\Debug\Common.pdb
+E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.dll
+E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.pdb
