@@ -16,11 +16,11 @@
 
         <Menu DockPanel.Dock="Top" Grid.Row="0" Background="LightSkyBlue">
             <MenuItem Header="文件">
-                <MenuItem Name="menuClose" Header="关闭" Click="menuClose_Click"></MenuItem>
+                <MenuItem Name="menuClose" Header="关闭" Command="{Binding MiClose}"/>
             </MenuItem>
             <MenuItem Header="更改波特率">
-                <MenuItem Name="menuChange2400" Header="2400" Click="menuChange2400_Click"/>
-                <MenuItem Name="menuChange9600"  Header="9600" Click="menuChange9600_Click"/>
+                <MenuItem Name="menuChange2400" Header="2400" Command="{Binding MiChangeBaudRate}" CommandParameter="2400" />
+                <MenuItem Name="menuChange9600" Header="9600" Command="{Binding MiChangeBaudRate}" CommandParameter="9600"/>
             </MenuItem>
             <MenuItem Header="帮助">
                 <MenuItem Header="关于"/>
@@ -49,9 +49,11 @@
                 <ComboBoxItem>9600</ComboBoxItem>
             </ComboBox>
             <Label Margin="10,0,0,0">操作者代码:</Label>
-            <TextBox x:Name="tbOprCode" MinWidth="70" MaxLength="8" HorizontalContentAlignment="Center">12345678</TextBox>
+            <TextBox x:Name="tbOprCode" MinWidth="70" MaxLength="8" HorizontalContentAlignment="Center"
+                     Text="{Binding OperCode}"/>
             <Label Margin="10,0,0,0">密码:</Label>
-            <TextBox x:Name="tbPsw" MinWidth="70" MaxLength="8" HorizontalContentAlignment="Center">12345602</TextBox>
+            <TextBox x:Name="tbPsw" MinWidth="70" MaxLength="8" HorizontalContentAlignment="Center"
+                     Text="{Binding Psw}"/>
         </ToolBar>
 
         <Grid Grid.Row="2">

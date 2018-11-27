@@ -43,10 +43,14 @@ namespace iMeter
 		public MainWindow()
         {
             InitializeComponent();
+			//初始化界面
             InitializeFace();
+			//状态栏显示当前时间
             ShowCurTime();
+			//报文显示
             IProtocol.MsgEvent += UpdateMsg;
 
+			//加载界面
 			this.OpenCommand = new RoutedCommand();
 			var bin = new CommandBinding(this.OpenCommand);
 			bin.Executed += bin_Executed;
@@ -77,33 +81,6 @@ namespace iMeter
             string date = DateTime.Now.ToString("yyyy/MM/dd");
             string time = DateTime.Now.ToString("HH:mm:ss");
 			this.SbiCurrentTime.Content = date + "  " + time;
-        }
-        #endregion
-
-        #region 菜单控制
-        private void menuClose_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void menuChange2400_Click(object sender, RoutedEventArgs e)
-        {
-            Protocol645 p645 = new Protocol645();
-            if (p645.ChangeBaudrate("08"))
-            {
-                IProtocol.BaudRate = 2400;
-                cbBaudRate.Text = "2400";
-            }
-        }
-
-        private void menuChange9600_Click(object sender, RoutedEventArgs e)
-        {
-            Protocol645 p645 = new Protocol645();
-            if (p645.ChangeBaudrate("20"))
-            {
-                IProtocol.BaudRate = 9600;
-                cbBaudRate.Text = "9600";
-            }
         }
         #endregion
 

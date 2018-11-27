@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\
+E:\C#\iMeter_wpf\iMeter\obj\Debug\
 iMeter
 none
 false
 DEBUG;TRACE
-D:\Code\iMeter\iMeter_wpf\iMeter\App.xaml
+E:\C#\iMeter_wpf\iMeter\App.xaml
 151563966362
 12125868905
 10-1711957426
-17-525996200
+17897359009
 MainWindow.xaml;Resources\Styles\BorderStyle.xaml;Resources\Styles\ButtonStyle.xaml;Resources\Styles\CheckBoxStyle.xaml;Resources\Styles\DataGridStyle.xaml;Resources\Styles\FontStyle.xaml;Resources\Styles\GroupboxStyle.xaml;Resources\Styles\IconStyles.xaml;Resources\Styles\ListBoxStyle.xaml;Resources\Styles\ScrollBarStyle.xaml;Resources\Styles\StatusBarStyle.xaml;Resources\Styles\TabControlStyle.xaml;Resources\Styles\TextBlockStyle.xaml;Resources\Styles\TextBoxStyle.xaml;View\Pages\Page_CommonPara.xaml;
 
 False
