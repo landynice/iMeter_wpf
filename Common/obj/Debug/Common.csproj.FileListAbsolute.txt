@@ -10,3 +10,13 @@ E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.csprojResolveAssemblyReference.
 E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.dll
 E:\C#\iMeter_wpf20181105\Common\obj\Debug\Common.pdb
+E:\Code\iMeter\iMeter_wpf\Common\bin\Debug\Common.dll
+E:\Code\iMeter\iMeter_wpf\Common\bin\Debug\Common.pdb
+E:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.dll
+E:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.pdb
+D:\Code\iMeter\iMeter_wpf\Common\bin\Debug\Common.dll
+D:\Code\iMeter\iMeter_wpf\Common\bin\Debug\Common.pdb
+D:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.dll
+D:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.pdb

@@ -40,3 +40,13 @@ E:\C#\iMeter_wpf20181105\Communication.Core\obj\Debug\Communication.Core.csprojR
 E:\C#\iMeter_wpf20181105\Communication.Core\obj\Debug\Communication.Core.csproj.CoreCompileInputs.cache
 E:\C#\iMeter_wpf20181105\Communication.Core\obj\Debug\Communication.Core.dll
 E:\C#\iMeter_wpf20181105\Communication.Core\obj\Debug\Communication.Core.pdb
+E:\Code\iMeter\iMeter_wpf\Communication.Core\bin\Debug\Communication.Core.dll
+E:\Code\iMeter\iMeter_wpf\Communication.Core\bin\Debug\Communication.Core.pdb
+E:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.csprojResolveAssemblyReference.cache
+E:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.dll
+E:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.pdb
+D:\Code\iMeter\iMeter_wpf\Communication.Core\bin\Debug\Communication.Core.dll
+D:\Code\iMeter\iMeter_wpf\Communication.Core\bin\Debug\Communication.Core.pdb
+D:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.csprojResolveAssemblyReference.cache
+D:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.dll
+D:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.pdb
