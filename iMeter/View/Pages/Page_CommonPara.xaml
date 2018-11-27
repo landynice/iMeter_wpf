@@ -22,7 +22,7 @@
             <Style TargetType="Button">
                 <Setter Property="Width" Value="30"/>
                 <Setter Property="Height" Value="30"/>
-                <Setter Property="Template" Value="{StaticResource DefaultButton}"/>
+                <!--<Setter Property="Template" Value="{StaticResource DefaultButton}"/>-->
                 <Setter Property="Content" Value="读"/>
                 <Setter Property="Command" Value="{Binding BtnRead}"/>
             </Style>
@@ -30,7 +30,7 @@
             <Style TargetType="Button" x:Key="SetBtn">
                 <Setter Property="Width" Value="30"/>
                 <Setter Property="Height" Value="30"/>
-                <Setter Property="Template" Value="{StaticResource ButtonPink}"/>
+                <!--<Setter Property="Template" Value="{StaticResource ButtonPink}"/>-->
                 <Setter Property="Content" Value="写"/>
             </Style>
         </Grid.Resources>

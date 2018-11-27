@@ -23,6 +23,17 @@ namespace iMeter
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string PortName
+        {
+            get
+            {
+                return IProtocol.PortName;
+            }
+            set
+            {
+                IProtocol.PortName = value;
+            }
+        }
 		public static readonly DependencyProperty OpenCommandProperty =
 	DependencyProperty.Register("OpenCommand", typeof(RoutedCommand), typeof(MainWindow), new PropertyMetadata(null));
 
@@ -115,8 +126,8 @@ namespace iMeter
             cbPort.Text = AppConfig.ComPort;
             cbBaudRate.Text = AppConfig.ComBaudrate.ToString();
 
-            IProtocol.PortName = cbPort.Text;
-            IProtocol.BaudRate = int.Parse(cbBaudRate.Text);
+            //IProtocol.PortName = cbPort.Text;
+            //IProtocol.BaudRate = int.Parse(cbBaudRate.Text);
         }
 
         private void InitializeFace()

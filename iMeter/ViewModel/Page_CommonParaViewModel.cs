@@ -54,9 +54,9 @@ namespace iMeter.ViewModel
 		private void Read(object obj)
 		{
 			Ret = string.Empty;
-			//Protocol645 p645 = new Protocol645();
-			//p645.ReadData(obj.ToString(), out _ret);
-			Ret = obj.ToString();
+            Protocol645 p645 = new Protocol645();
+            p645.ReadData(obj.ToString(), out _ret);
+			//Ret = obj.ToString();
 		}
 		/// <summary>
 		/// 设数据

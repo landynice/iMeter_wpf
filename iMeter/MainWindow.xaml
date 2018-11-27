@@ -39,7 +39,7 @@
                     Template="{StaticResource DefaultButton}"/>
 
             <Label Margin="100,0,0,0">串口:</Label>
-            <ComboBox x:Name="cbPort" MinWidth="60"></ComboBox>
+            <ComboBox x:Name="cbPort" MinWidth="60" Text="{Binding PortName, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
             <Label Margin="10,0,0,0">波特率:</Label>
             <ComboBox x:Name="cbBaudRate" MinWidth="60">
                 <ComboBoxItem>1200</ComboBoxItem>
@@ -86,12 +86,12 @@
 
                         <Frame x:Name="PageContext" Grid.Row="0" NavigationUIVisibility="Visible" 
                                Source="View/Pages/Page_CommonPara.xaml">
-                            <Frame.Background>
+                            <!--<Frame.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="DarkSeaGreen"  Offset="0"/>
                                     <GradientStop Color="White" Offset="1"/>
                                 </LinearGradientBrush>
-                            </Frame.Background>
+                            </Frame.Background>-->
                         </Frame>
 
                         <GridSplitter Height="3" 
