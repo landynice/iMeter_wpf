@@ -103,35 +103,35 @@
         <!--第2列-->
         <Button Grid.Row="0" Grid.Column="2" CommandParameter="04000101"/>
         <Button Grid.Row="1" Grid.Column="2" CommandParameter="04000102"/>
-        <Button Grid.Row="2" Grid.Column="2"/>
-        <Button Grid.Row="3" Grid.Column="2"/>
-        <Button Grid.Row="4" Grid.Column="2"/>
-        <Button Grid.Row="5" Grid.Column="2"/>
-        <Button Grid.Row="6" Grid.Column="2"/>
-        <Button Grid.Row="7" Grid.Column="2"/>
-        <Button Grid.Row="8" Grid.Column="2"/>
-        <Button Grid.Row="9" Grid.Column="2"/>
-        <Button Grid.Row="10" Grid.Column="2"/>
-        <Button Grid.Row="11" Grid.Column="2"/>
-        <Button Grid.Row="12" Grid.Column="2"/>
-        <Button Grid.Row="13" Grid.Column="2"/>
-        <Button Grid.Row="14" Grid.Column="2"/>
+        <Button Grid.Row="2" Grid.Column="2" CommandParameter="04000402"/>
+        <Button Grid.Row="3" Grid.Column="2" CommandParameter="04000201"/>
+        <Button Grid.Row="4" Grid.Column="2" CommandParameter="04000202"/>
+        <Button Grid.Row="5" Grid.Column="2" CommandParameter="04000203"/>
+        <Button Grid.Row="6" Grid.Column="2" CommandParameter="04000204"/>
+        <Button Grid.Row="7" Grid.Column="2" CommandParameter="04000B01"/>
+        <Button Grid.Row="8" Grid.Column="2" CommandParameter="04000B02"/>
+        <Button Grid.Row="9" Grid.Column="2" CommandParameter="04000B03"/>
+        <Button Grid.Row="10" Grid.Column="2" CommandParameter="04000106"/>
+        <Button Grid.Row="11" Grid.Column="2" CommandParameter="04000107"/>
+        <Button Grid.Row="12" Grid.Column="2" CommandParameter="04000109"/>
+        <Button Grid.Row="13" Grid.Column="2" CommandParameter="04000601"/>
+        <Button Grid.Row="14" Grid.Column="2" CommandParameter="04000701"/>
         <!--第3列-->
-        <Button Grid.Row="0" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="5" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="6" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="7" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="8" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="9" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="10" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="11" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="12" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="13" Grid.Column="3" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="14" Grid.Column="3" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="0" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000101"/>
+        <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000102"/>
+        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000402"/>
+        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000201"/>
+        <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000202"/>
+        <Button Grid.Row="5" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000203"/>
+        <Button Grid.Row="6" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000204"/>
+        <Button Grid.Row="7" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000B01"/>
+        <Button Grid.Row="8" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000B02"/>
+        <Button Grid.Row="9" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000B03"/>
+        <Button Grid.Row="10" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000106"/>
+        <Button Grid.Row="11" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000107"/>
+        <Button Grid.Row="12" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000109"/>
+        <Button Grid.Row="13" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000601"/>
+        <Button Grid.Row="14" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000701"/>
         <!--第4列-->
         <Border Grid.RowSpan="15" Grid.Column="4" Background="Black" Margin="5,0"/>
         <!--第5列-->
@@ -167,37 +167,37 @@
         <TextBox Grid.Row="13" Grid.Column="6"/>
         <TextBox Grid.Row="14" Grid.Column="6"/>
         <!--第7列-->
-        <Button Grid.Row="0" Grid.Column="7"/>
-        <Button Grid.Row="1" Grid.Column="7"/>
-        <Button Grid.Row="2" Grid.Column="7"/>
-        <Button Grid.Row="3" Grid.Column="7"/>
-        <Button Grid.Row="4" Grid.Column="7"/>
-        <Button Grid.Row="5" Grid.Column="7"/>
-        <Button Grid.Row="6" Grid.Column="7"/>
-        <Button Grid.Row="7" Grid.Column="7"/>
-        <Button Grid.Row="8" Grid.Column="7"/>
-        <Button Grid.Row="9" Grid.Column="7"/>
-        <Button Grid.Row="10" Grid.Column="7"/>
-        <Button Grid.Row="11" Grid.Column="7"/>
-        <Button Grid.Row="12" Grid.Column="7"/>
-        <Button Grid.Row="13" Grid.Column="7"/>
-        <Button Grid.Row="14" Grid.Column="7"/>
+        <Button Grid.Row="0" Grid.Column="7" CommandParameter="04000205"/>
+        <Button Grid.Row="1" Grid.Column="7" CommandParameter="04000207"/>
+        <Button Grid.Row="2" Grid.Column="7" CommandParameter="04000301"/>
+        <Button Grid.Row="3" Grid.Column="7" CommandParameter="04000302"/>
+        <Button Grid.Row="4" Grid.Column="7" CommandParameter="04000303"/>
+        <Button Grid.Row="5" Grid.Column="7" CommandParameter="04000304"/>
+        <Button Grid.Row="6" Grid.Column="7" CommandParameter="04000305"/>
+        <Button Grid.Row="7" Grid.Column="7" CommandParameter="0400040E"/>
+        <Button Grid.Row="8" Grid.Column="7" CommandParameter="04001201"/>
+        <Button Grid.Row="9" Grid.Column="7" CommandParameter="04001202"/>
+        <Button Grid.Row="10" Grid.Column="7" CommandParameter="04001203"/>
+        <Button Grid.Row="11" Grid.Column="7" CommandParameter="04001401"/>
+        <Button Grid.Row="12" Grid.Column="7" CommandParameter="04000105"/>
+        <Button Grid.Row="13" Grid.Column="7" CommandParameter="04000801"/>
+        <Button Grid.Row="14" Grid.Column="7" CommandParameter="04000802"/>
         <!--第8列-->
-        <Button Grid.Row="0" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="1" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="2" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="3" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="4" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="5" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="6" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="7" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="8" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="9" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="10" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="11" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="12" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="13" Grid.Column="8" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="14" Grid.Column="8" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="0" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000205"/>
+        <Button Grid.Row="1" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000207"/>
+        <Button Grid.Row="2" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000301"/>
+        <Button Grid.Row="3" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000302"/>
+        <Button Grid.Row="4" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000303"/>
+        <Button Grid.Row="5" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000304"/>
+        <Button Grid.Row="6" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000305"/>
+        <Button Grid.Row="7" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="0400040E"/>
+        <Button Grid.Row="8" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001201"/>
+        <Button Grid.Row="9" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001202"/>
+        <Button Grid.Row="10" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001203"/>
+        <Button Grid.Row="11" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001401"/>
+        <Button Grid.Row="12" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000105"/>
+        <Button Grid.Row="13" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000801"/>
+        <Button Grid.Row="14" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000802"/>
         <!--第9列-->
         <Border Grid.RowSpan="15" Grid.Column="9" Background="Black" Margin="5,0"/>
         <!--第10列-->
@@ -233,37 +233,37 @@
         <TextBox Grid.Row="13" Grid.Column="11"/>
         <TextBox Grid.Row="14" Grid.Column="11"/>
         <!--第12列-->
-        <Button Grid.Row="0" Grid.Column="12"/>
-        <Button Grid.Row="1" Grid.Column="12"/>
-        <Button Grid.Row="2" Grid.Column="12"/>
-        <Button Grid.Row="3" Grid.Column="12"/>
-        <Button Grid.Row="4" Grid.Column="12"/>
-        <Button Grid.Row="5" Grid.Column="12"/>
-        <Button Grid.Row="6" Grid.Column="12"/>
-        <Button Grid.Row="7" Grid.Column="12"/>
-        <Button Grid.Row="8" Grid.Column="12"/>
-        <Button Grid.Row="9" Grid.Column="12"/>
-        <Button Grid.Row="10" Grid.Column="12"/>
-        <Button Grid.Row="11" Grid.Column="12"/>
-        <Button Grid.Row="12" Grid.Column="12"/>
-        <Button Grid.Row="13" Grid.Column="12"/>
-        <Button Grid.Row="14" Grid.Column="12"/>
+        <Button Grid.Row="0" Grid.Column="12" CommandParameter="04000902"/>
+        <Button Grid.Row="1" Grid.Column="12" CommandParameter="04000903"/>
+        <Button Grid.Row="2" Grid.Column="12" CommandParameter="04000904"/>
+        <Button Grid.Row="3" Grid.Column="12" CommandParameter="04000905"/>
+        <Button Grid.Row="4" Grid.Column="12" CommandParameter="04000906"/>
+        <Button Grid.Row="5" Grid.Column="12" CommandParameter="04001101"/>
+        <Button Grid.Row="6" Grid.Column="12" CommandParameter="04000409"/>
+        <Button Grid.Row="7" Grid.Column="12" CommandParameter="04000404"/>
+        <Button Grid.Row="8" Grid.Column="12" CommandParameter="04000405"/>
+        <Button Grid.Row="9" Grid.Column="12" CommandParameter="04000406"/>
+        <Button Grid.Row="10" Grid.Column="12" CommandParameter="0400040B"/>
+        <Button Grid.Row="11" Grid.Column="12" CommandParameter="0400040C"/>
+        <Button Grid.Row="12" Grid.Column="12" CommandParameter="04000407"/>
+        <Button Grid.Row="13" Grid.Column="12" CommandParameter="04000801"/>
+        <Button Grid.Row="14" Grid.Column="12" CommandParameter="04000802"/>
         <!--第13列-->
-        <Button Grid.Row="0" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="1" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="2" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="3" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="4" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="5" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="6" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="7" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="8" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="9" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="10" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="11" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="12" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="13" Grid.Column="13" Style="{StaticResource SetBtn}"/>
-        <Button Grid.Row="14" Grid.Column="13" Style="{StaticResource SetBtn}"/>
+        <Button Grid.Row="0" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000902"/>
+        <Button Grid.Row="1" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000903"/>
+        <Button Grid.Row="2" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000904"/>
+        <Button Grid.Row="3" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000905"/>
+        <Button Grid.Row="4" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000906"/>
+        <Button Grid.Row="5" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04001101"/>
+        <Button Grid.Row="6" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000409"/>
+        <Button Grid.Row="7" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000404"/>
+        <Button Grid.Row="8" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000405"/>
+        <Button Grid.Row="9" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000406"/>
+        <Button Grid.Row="10" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="0400040B"/>
+        <Button Grid.Row="11" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="0400040C"/>
+        <Button Grid.Row="12" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000407"/>
+        <Button Grid.Row="13" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000801"/>
+        <Button Grid.Row="14" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000802"/>
         <!--<StackPanel>
             <Button Command="{Binding btnTest}" Content="test"/>
             <TextBox Text="{Binding Ret}"/>
