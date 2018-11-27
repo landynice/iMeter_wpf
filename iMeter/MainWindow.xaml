@@ -28,20 +28,21 @@
         </Menu>
 
         <ToolBar Grid.Row="1" Background="LightSkyBlue">
-            <Button x:Name="btnSetAddr" Click="btnSetAddr_Click"
-                    FontSize="18" Margin="5,0" Content="写表地址"
-                    Template="{StaticResource ButtonPink}"/>
+            <Button x:Name="btnSetAddr" FontSize="18" Margin="5,0" Content="写表地址"
+                    Template="{StaticResource ButtonPink}"
+                    Command="{Binding BtnSetAddr}"/>
             <TextBox x:Name="tbAddr" 
                      Width="150" MaxLength="12" HorizontalContentAlignment="Center" 
-                     Style="{StaticResource TxbTrigger}" Tag="请先读表地址..."/>
-            <Button x:Name="btnReadAddr" Click="btnReadAddr_Click" 
-                    FontSize="18" Margin="5,0" Content="读表地址"
-                    Template="{StaticResource DefaultButton}"/>
+                     Style="{StaticResource TxbTrigger}" Tag="请先读表地址..."
+                     Text="{Binding Address}"/>
+            <Button x:Name="btnReadAddr" FontSize="18" Margin="5,0" Content="读表地址"
+                    Template="{StaticResource DefaultButton}"
+                    Command="{Binding BtnReadAddr}"/>
 
             <Label Margin="100,0,0,0">串口:</Label>
-            <ComboBox x:Name="cbPort" MinWidth="60" Text="{Binding PortName, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <ComboBox x:Name="cbPort" MinWidth="60" Text="{Binding PortName}"/>
             <Label Margin="10,0,0,0">波特率:</Label>
-            <ComboBox x:Name="cbBaudRate" MinWidth="60">
+            <ComboBox x:Name="cbBaudRate" MinWidth="60" Text="{Binding Baudrate}">
                 <ComboBoxItem>1200</ComboBoxItem>
                 <ComboBoxItem>2400</ComboBoxItem>
                 <ComboBoxItem>4800</ComboBoxItem>

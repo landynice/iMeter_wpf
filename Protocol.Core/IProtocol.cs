@@ -13,10 +13,11 @@ namespace Protocol.Core
     public abstract class IProtocol
     {
         //声明报文处理事件
-        public event MsgHander MsgEvent;
+        public static event MsgHander MsgEvent;
 
         protected static string _portName = "COM1";
         protected static int _baudRate = 2400;
+        private readonly string _4FE = "FEFEFEFE";
 
         /// <summary>
         /// 串口号
@@ -81,15 +82,17 @@ namespace Protocol.Core
 
         protected virtual bool Send(string str)
         {
+            str = _4FE + str;
             if(MsgEvent != null)
             {
-                MsgEvent(true,str);
+                MsgEvent(true, str);
             }
             return _sp.Send(str);
         }
 
         protected virtual string SendAndRec(string str)
         {
+            str = _4FE + str;
             if(MsgEvent != null)
             {
                 MsgEvent(true,str);

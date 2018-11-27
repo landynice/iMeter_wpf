@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using Protocol.Core;
 using Common;
+using iMeter.ViewModel;
 
 namespace iMeter
 {
@@ -23,17 +24,7 @@ namespace iMeter
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string PortName
-        {
-            get
-            {
-                return IProtocol.PortName;
-            }
-            set
-            {
-                IProtocol.PortName = value;
-            }
-        }
+
 		public static readonly DependencyProperty OpenCommandProperty =
 	DependencyProperty.Register("OpenCommand", typeof(RoutedCommand), typeof(MainWindow), new PropertyMetadata(null));
 
@@ -54,11 +45,15 @@ namespace iMeter
             InitializeComponent();
             InitializeFace();
             ShowCurTime();
+            IProtocol.MsgEvent += UpdateMsg;
 
 			this.OpenCommand = new RoutedCommand();
 			var bin = new CommandBinding(this.OpenCommand);
 			bin.Executed += bin_Executed;
 			this.CommandBindings.Add(bin);
+
+            Name = "主窗体";
+            DataContext = new MainWindowViewModel();
 		}
 
         #region 时钟
@@ -126,8 +121,8 @@ namespace iMeter
             cbPort.Text = AppConfig.ComPort;
             cbBaudRate.Text = AppConfig.ComBaudrate.ToString();
 
-            //IProtocol.PortName = cbPort.Text;
-            //IProtocol.BaudRate = int.Parse(cbBaudRate.Text);
+            IProtocol.PortName = cbPort.Text;
+            IProtocol.BaudRate = int.Parse(cbBaudRate.Text);
         }
 
         private void InitializeFace()
@@ -248,6 +243,7 @@ namespace iMeter
                 if (count >= 1000)
                     richMsg.Document.Blocks.Clear();
                 SolidColorBrush brush = null;
+
                 if (warning == true)
                 {
                     brush = new SolidColorBrush(Colors.Red);
@@ -263,10 +259,11 @@ namespace iMeter
                         brush = new SolidColorBrush(Colors.Black);
                     }
                 }
+                richMsg.Document.LineHeight = 1;//设置行间距
                 Paragraph p = new Paragraph();
                 p.Foreground = brush;
                 p.FontSize = fontSize;
-                Run Runtext = new Run((withTime ? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" : "") + text);
+                Run Runtext = new Run((withTime ? DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + ":" : "") + text);
                 p.Inlines.Add(Runtext);
                 richMsg.Document.Blocks.Add(p);
 
@@ -292,7 +289,7 @@ namespace iMeter
                 Paragraph p = new Paragraph();
                 p.Foreground = new SolidColorBrush(fontColor); ;
                 p.FontSize = fontSize;
-                Run Runtext = new Run((withTime ? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" : "") + text);
+                Run Runtext = new Run((withTime ? DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + ":" : "") + text);
                 p.Inlines.Add(Runtext);
 
                 //Hyperlink ddd = new Hyperlink(Runtext);
@@ -328,7 +325,7 @@ namespace iMeter
                 Paragraph p = new Paragraph();
                 p.Background = brush;
                 p.FontSize = fontSize;
-                Run Runtext = new Run((withTime ? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" : "") + text);
+                Run Runtext = new Run((withTime ? DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + ":" : "") + text);
                 p.Inlines.Add(Runtext);
                 richMsg.Document.Blocks.Add(p);
 
@@ -358,7 +355,7 @@ namespace iMeter
                 p.FontSize = fontSize;
                 if (withTime == true)
                 {
-                    p.Inlines.Add(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ");
+                    p.Inlines.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " ");
                 }
 
                 Run Runtext = new Run(text);
@@ -393,42 +390,6 @@ namespace iMeter
 
         #endregion
 
-        #region 表地址
-        private void btnReadAddr_Click(object sender, RoutedEventArgs e)
-        {
-            tbAddr.Text = string.Empty;
-            System.Threading.Thread.Sleep(100);
-
-            Protocol645 p645 = new Protocol645();
-            string ret = string.Empty;
-            if(p645.ReadAddress(out ret))
-            {
-                tbAddr.Text = ret;
-            }
-        }
-
-        private void btnSetAddr_Click(object sender, RoutedEventArgs e)
-        {
-            if (tbAddr.Text != "")
-            {
-                string addr = tbAddr.Text.PadLeft(12, '0');
-                if (Functions.IsNum(addr))
-                {
-                    Protocol645 p645 = new Protocol645();
-                    p645.WriteAddress(addr);
-                }
-                else
-                {
-                    MessageBox.Show("请不要输入数字以外的字符！");
-                }
-            }
-            else
-            {
-                MessageBox.Show("请输入表地址！");
-            }
-        }
-        #endregion
-
         #region 窗口关闭事件
         private void WinClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -448,6 +409,16 @@ namespace iMeter
 
         #endregion
 
-        
+        #region 报文监控
+        private void UpdateMsg(bool isSend, string str)
+        {
+            string txt = isSend ? "发送：" : "接收：";
+            for (int i = 0; i < str.Length; i += 2)
+            {
+                txt += (str.Substring(i, 2) + " ");
+            }
+            AppendTextForegroundBrush(txt);
+        }
+        #endregion
     }
 }
