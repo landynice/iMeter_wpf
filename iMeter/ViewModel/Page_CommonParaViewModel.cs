@@ -13,6 +13,7 @@ namespace iMeter.ViewModel
 		public Page_CommonParaViewModel()
 		{
 			BtnRead = new RelayCommand(Read);
+            BtnSet = new RelayCommand(Set);
 		}
 
 		/// <summary>
@@ -25,6 +26,7 @@ namespace iMeter.ViewModel
 		/// </summary>
 		public RelayCommand BtnSet { get; set; }
 
+        Dictionary<string, string> _result = new Dictionary<string,string>();
 		private string _ret;
 		public string Ret
 		{

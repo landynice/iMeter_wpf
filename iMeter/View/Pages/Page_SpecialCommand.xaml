@@ -1,0 +1,153 @@
+﻿<Page x:Class="iMeter.View.Pages.Page_SpecialCommand"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:iMeter.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="880"
+      Title="Page_SpecialCommand">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="KM">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="读KM版本号"/>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="读定时冻结时间"/>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="单相表出厂状态"/>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="KM单相表清EEP"/>
+                        <Button Content="单相表超级密码"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="040001E0设出厂"/>
+                        <Button Content="040001E0清出厂"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="04091120设出厂"/>
+                        <Button Content="04091120清出厂"/>
+                    </StackPanel>
+                    <GroupBox Header="KM三相表清EEPROM">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="额定电压"/>
+                                <TextBlock Text="额定电流"/>
+                                <TextBlock Text="最大电流"/>
+                                <TextBlock Text="有功精度等级"/>
+                                <TextBlock Text="无功精度等级"/>
+                                <TextBlock Text="有功脉冲常数"/>
+                                <TextBlock Text="无功脉冲常数"/>
+                                <TextBlock Text="电表型号"/>
+                                <TextBlock Text="生产日期"/>
+                                <TextBlock Text="协议版本号"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Grid.Column="1">
+                                <TextBox>220</TextBox>
+                                <TextBox>5</TextBox>
+                                <TextBox>60</TextBox>
+                                <TextBox>1</TextBox>
+                                <TextBox>2</TextBox>
+                                <TextBox>400</TextBox>
+                                <TextBox>400</TextBox>
+                                <ComboBox>
+                                    <ComboBoxItem>DTSD67-Z</ComboBoxItem>
+                                    <ComboBoxItem>DSSD67-Z</ComboBoxItem>
+                                    <ComboBoxItem>DTZY67</ComboBoxItem>
+                                    <ComboBoxItem>DSZY67</ComboBoxItem>
+                                    <ComboBoxItem>DTZY67-Z</ComboBoxItem>
+                                    <ComboBoxItem>DSZY67-Z</ComboBoxItem>
+                                    <ComboBoxItem>DTZY67-G</ComboBoxItem>
+                                    <ComboBoxItem>DSZY67-G</ComboBoxItem>
+                                    <ComboBoxItem>DTZY67-J</ComboBoxItem>
+                                    <ComboBoxItem>DTSDXX</ComboBoxItem>
+                                    <ComboBoxItem>DSSDXX</ComboBoxItem>
+                                </ComboBox>
+                                <TextBox>20170825</TextBox>
+                                <ComboBox>
+                                    <ComboBoxItem>DL/T645-2007</ComboBoxItem>
+                                    <ComboBoxItem>DL/T645-2007-12</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                            <Button Grid.Row="1" Grid.ColumnSpan="2" Content="初始化"/>
+                        </Grid>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="复旦微">
+                
+            </TabItem>
+            <TabItem Header="钜泉">
+
+            </TabItem>
+            <TabItem Header="银河龙芯">
+
+            </TabItem>
+            <TabItem Header="福建特殊命令">
+
+            </TabItem>
+            <TabItem Header="欣瑞利">
+
+            </TabItem>
+        </TabControl>
+        <GroupBox Header="公用" Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <GroupBox Header="日期时间">
+                    <Button Content="设置日期时间"/>
+                </GroupBox>
+                <GroupBox Header="清零">
+                    <WrapPanel>
+                        <Button Content="电表清零"/>
+                        <Button Content="事件总清零"/>
+                        <Button Content="最大需量清零"/>
+                        <Button Content="分项事件清零"/>
+                        <TextBox Width="100"/>
+                        <TextBlock Text="DI3 DI2 DI1" VerticalAlignment="Center"/>
+                    </WrapPanel>
+                </GroupBox>
+                <GroupBox Header="冻结">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="冻结" FontSize="30" Width="80" Margin="5,5"/>
+                        <TextBox Width="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">99999999</TextBox>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="99DDhhmm以月为周期"/>
+                            <TextBlock Text="9999hhmm以日为周期"/>
+                            <TextBlock Text="999999mm以小时为周期"/>
+                            <TextBlock Text="99999999瞬时冻结"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="多功能段子控制">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="时钟秒脉冲"/>
+                            <RadioButton Content="需量周期脉冲"/>
+                            <RadioButton Content="时段投切脉冲"/>
+                        </StackPanel>
+                        <Button Content="设置" Width="80"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Page>

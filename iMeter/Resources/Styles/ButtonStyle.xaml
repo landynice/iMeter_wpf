@@ -118,4 +118,34 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+
+    <ControlTemplate x:Key="ButtonWhite" TargetType="{x:Type Button}">
+        <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0" CornerRadius="3,3,3,3" Name="BtnSaveSender_bg">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="White" Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="Border.Background" TargetName="BtnSaveSender_bg">
+                    <Setter.Value>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="LightSkyBlue" Offset="0.0" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="True">
+                <Setter Property="UIElement.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="10" Color="#1C86EE" Direction="0" Opacity="0.6" RenderingBias="Performance" ShadowDepth="0" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
 </ResourceDictionary>
