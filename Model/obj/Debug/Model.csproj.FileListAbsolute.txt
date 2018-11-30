@@ -18,7 +18,6 @@ E:\C#\iMeter_wpf20181105\Model\bin\Debug\Model.dll
 E:\C#\iMeter_wpf20181105\Model\bin\Debug\Model.pdb
 E:\Code\iMeter\iMeter_wpf\Model\bin\Debug\Model.dll
 E:\Code\iMeter\iMeter_wpf\Model\bin\Debug\Model.pdb
-E:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.dll
 E:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.pdb
 D:\Code\iMeter\iMeter_wpf\Model\bin\Debug\Model.dll
@@ -26,3 +25,5 @@ D:\Code\iMeter\iMeter_wpf\Model\bin\Debug\Model.pdb
 D:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.dll
 D:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.pdb
+E:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\Code\iMeter\iMeter_wpf\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache

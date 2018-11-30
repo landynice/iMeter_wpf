@@ -109,3 +109,6 @@ D:\Code\iMeter\iMeter_wpf\Protocol.Core\bin\Debug\Communication.Core.pdb
 D:\Code\iMeter\iMeter_wpf\Protocol.Core\obj\Debug\Protocol.Core.csprojResolveAssemblyReference.cache
 D:\Code\iMeter\iMeter_wpf\Protocol.Core\obj\Debug\Protocol.Core.dll
 D:\Code\iMeter\iMeter_wpf\Protocol.Core\obj\Debug\Protocol.Core.pdb
+E:\Code\iMeter\iMeter_wpf\Protocol.Core\obj\Debug\Protocol.Core.csprojAssemblyReference.cache
+E:\Code\iMeter\iMeter_wpf\Protocol.Core\obj\Debug\Protocol.Core.csproj.CoreCompileInputs.cache
+E:\Code\iMeter\iMeter_wpf\Protocol.Core\obj\Debug\Protocol.Core.csproj.CopyComplete
