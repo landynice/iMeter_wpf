@@ -21,11 +21,15 @@ namespace Protocol.Core
             }
             set
             {
-                if(value.Length <= 12)
+                if (value.Length <= 12 && value.Length > 0)
                 {
                     _addr = value.PadLeft(12, '0');//不足12个字符前面补0
                 }
-                
+                else
+                {
+                    _addr = value;
+                }
+
             }
         }
         #endregion

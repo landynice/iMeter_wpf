@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+using System.Threading.Tasks;
 using Model;
 using Protocol.Core;
 using Common;
@@ -108,9 +109,11 @@ namespace iMeter.ViewModel
         /// 读表地址
         /// </summary>
         /// <param name="obj"></param>
-        private void ReadAddr(object obj)
+        private async void ReadAddr(object obj)
         {
             Address = string.Empty;
+
+            await Task.Delay(TimeSpan.FromMilliseconds(100));//延时，让文本框内容闪一下，需要将方法标记为async
 
             Protocol645 p645 = new Protocol645();
             string ret = string.Empty;

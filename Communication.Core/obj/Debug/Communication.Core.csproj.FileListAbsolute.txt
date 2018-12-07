@@ -49,5 +49,4 @@ D:\Code\iMeter\iMeter_wpf\Communication.Core\bin\Debug\Communication.Core.pdb
 D:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.csprojResolveAssemblyReference.cache
 D:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.dll
 D:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.pdb
-E:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.csprojAssemblyReference.cache
 E:\Code\iMeter\iMeter_wpf\Communication.Core\obj\Debug\Communication.Core.csproj.CoreCompileInputs.cache
