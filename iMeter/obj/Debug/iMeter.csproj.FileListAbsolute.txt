@@ -268,3 +268,7 @@ E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\iMeter.csproj.CoreCompileInputs.cache
 E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\iMeter.csproj.CopyComplete
 E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\View\Pages\Page_SpecialCommand.g.cs
 E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\View\Pages\Page_SpecialCommand.baml
+E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\View\Pages\Page_ESAM_Ctrl.g.cs
+E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\View\Pages\Page_ESAM_Ctrl.baml
+E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\View\Pages\Page_Status.g.cs
+E:\Code\iMeter\iMeter_wpf\iMeter\obj\Debug\View\Pages\Page_Status.baml

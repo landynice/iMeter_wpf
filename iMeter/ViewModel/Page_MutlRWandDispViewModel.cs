@@ -37,12 +37,14 @@ namespace iMeter.ViewModel
             }
         }
 
-        private string _ID;
-        public string ID
+        private string _ret1;
+        public string Ret1
         {
+            get { return _ret1; }
             set
             {
-                _ID = value;
+                _ret1 = value;
+                RaisePropertyChanged("Ret1");
             }
         }
 

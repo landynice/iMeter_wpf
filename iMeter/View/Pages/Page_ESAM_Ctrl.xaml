@@ -1,0 +1,150 @@
+﻿<Page x:Class="iMeter.View.Pages.Page_ESAM_Ctrl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:iMeter.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="700"
+      Title="Page_ESAM_Ctrl">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="身份认证">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>密钥类型：</TextBlock>
+                        <RadioButton Content="公钥" IsChecked="True"/>
+                        <RadioButton Content="私钥" Margin="10,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>随机数 1：</TextBlock>
+                        <TextBox IsReadOnly="True"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>随机数 2：</TextBlock>
+                        <TextBox IsReadOnly="True"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="1" Margin="15,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>分散因子：</TextBlock>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>密    文：</TextBlock>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>ESAM 号：</TextBlock>
+                        <TextBox/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Margin="15,0">
+                    <Button Content="身份认证"/>
+                    <Button Content="读认证时效"/>
+                    <Button Content="读认证状态"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="3" Margin="15,0">
+                    <TextBox Visibility="Hidden"/>
+                    <TextBox/>
+                    <TextBox/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="4" Margin="15,0">
+                    <Button Content=""/>
+                    <Button Content="设认证时效"/>
+                    <Button Content="身份认证失效"/>
+                </StackPanel>
+                <TextBox Grid.Column="5" Margin="15,0"/>
+            </Grid>
+        </GroupBox>
+
+        <TabControl Grid.Row="1">
+            <TabItem Header="命令" Width="100">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto" MinWidth="100"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="控制命令">
+                        <StackPanel Orientation="Vertical">
+                            <GroupBox>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="8">
+                                    <RadioButton Content="明文模式" FontWeight="Bold" IsChecked="True"/>
+                                    <RadioButton Content="密文模式" FontWeight="Bold" Margin="10,0"/>
+                                </StackPanel>
+                            </GroupBox>
+                            
+                            <RadioButton Content="跳闸（1A）" IsChecked="True" Margin="0,3"/>
+                            <RadioButton Content="允许合闸（1B）" Margin="0,3"/>
+                            <RadioButton Content="直接合闸（1C）" Margin="0,3"/>
+                            <RadioButton x:Name="rbPreSwitchOffToOn" Content="预跳闸延时时间到直接合闸（1D）" IsChecked="{Binding Path=Visibility.Collapsed, ElementName=spMsg, Mode=TwoWay}" Margin="0,3"/>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" x:Name="spMsg">
+                                    <TextBox/>
+                                    <TextBlock>x5分钟   倒计时：</TextBlock>
+                                    <TextBlock/>
+                                </StackPanel>
+                            </StackPanel>
+                            <RadioButton Content="预跳闸延时时间到合闸允许（1E）" Margin="0,3"/>
+                            <RadioButton Content="报警（2A）" Margin="0,3"/>
+                            <RadioButton Content="解除报警（2B）" Margin="0,3"/>
+                            <RadioButton Content="保电（3A）" Margin="0,3"/>
+                            <RadioButton Content="解除保电（3B）" Margin="0,3"/>
+                            <Button Content="执       行" Margin="0,3"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Grid.Column="1" Header="清零">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Content="电量清零" IsChecked="True" Margin="10"/>
+                            <RadioButton Content="需量清零" Grid.Row="1" Margin="10"/>
+                            <RadioButton Content="事件清零" Grid.Row="2" Margin="10"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="10">
+                                <TextBox>FFFFFFFF</TextBox>
+                                <TextBlock>分项ID[D3D2D1FF]</TextBlock>
+                            </StackPanel>
+                            <Button Grid.Row="3" Grid.ColumnSpan="2" Content="执       行"/>
+                        </Grid>
+                    </GroupBox>
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                        <TextBox>181210142100</TextBox>
+                        <TextBlock>命令有效截止时间(YYMMDDhhmmss)</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="一类数据" Width="100">
+                
+            </TabItem>
+            <TabItem Header="二类数据" Width="100">
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

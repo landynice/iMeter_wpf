@@ -61,16 +61,25 @@
     <Compile Include="AppConfig.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\Page_CommonParaViewModel.cs" />
+    <Compile Include="ViewModel\Page_ESAM_CtrlViewModel.cs" />
     <Compile Include="ViewModel\Page_MutlRWandDispViewModel.cs" />
+    <Compile Include="ViewModel\Page_SpecialCommandViewModel.cs" />
+    <Compile Include="ViewModel\Page_StatusViewModel.cs" />
     <Compile Include="View\GridHelper.cs" />
     <Compile Include="View\Pages\Page_CommonPara.xaml.cs">
       <DependentUpon>Page_CommonPara.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Page_ESAM_Ctrl.xaml.cs">
+      <DependentUpon>Page_ESAM_Ctrl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Page_MutlRWandDisp.xaml.cs">
       <DependentUpon>Page_MutlRWandDisp.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Page_SpecialCommand.xaml.cs">
       <DependentUpon>Page_SpecialCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Page_Status.xaml.cs">
+      <DependentUpon>Page_Status.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -140,11 +149,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\Page_ESAM_Ctrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\Page_MutlRWandDisp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\Page_SpecialCommand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\Page_Status.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

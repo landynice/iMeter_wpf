@@ -20,3 +20,4 @@ D:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.csprojResolveAssemblyReference
 D:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.dll
 D:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.pdb
 E:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Code\iMeter\iMeter_wpf\Common\obj\Debug\Common.csprojAssemblyReference.cache

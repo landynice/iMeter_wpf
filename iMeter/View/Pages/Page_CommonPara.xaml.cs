@@ -14,5 +14,10 @@ namespace iMeter.View.Pages
 			Name = "常用参数";
 			DataContext = new Page_CommonParaViewModel();
 		}
+
+        private void Button_MouseRightButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            tbtest.Text = "test";
+        }
     }
 }

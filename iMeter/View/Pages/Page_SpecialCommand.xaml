@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:iMeter.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="880"
+      d:DesignHeight="500" d:DesignWidth="700"
       Title="Page_SpecialCommand">
 
     <Grid>
@@ -16,32 +16,32 @@
         <TabControl>
             <TabItem Header="KM">
                 <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="读KM版本号"/>
-                        <TextBox/>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                        <Button Content="读KM版本号" Width="200" Margin="0,0,5,0"/>
+                        <TextBox Width="200"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="读定时冻结时间"/>
-                        <TextBox/>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                        <Button Content="读定时冻结时间" Width="200" Margin="0,0,5,0"/>
+                        <TextBox Width="200"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="单相表出厂状态"/>
-                        <TextBox/>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                        <Button Content="单相表出厂状态" Width="200" Margin="0,0,5,0"/>
+                        <TextBox Width="200"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="KM单相表清EEP"/>
-                        <Button Content="单相表超级密码"/>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                        <Button Content="KM单相表清EEP" Width="200" Margin="0,0,5,0"/>
+                        <Button Content="单相表超级密码" Width="200" Margin="0,0,5,0"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="040001E0设出厂"/>
-                        <Button Content="040001E0清出厂"/>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                        <Button Content="040001E0设出厂" Width="200" Margin="0,0,5,0"/>
+                        <Button Content="040001E0清出厂" Width="200" Margin="0,0,5,0"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="04091120设出厂"/>
-                        <Button Content="04091120清出厂"/>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                        <Button Content="04091120设出厂" Width="200" Margin="0,0,5,0"/>
+                        <Button Content="04091120清出厂" Width="200" Margin="0,0,5,0"/>
                     </StackPanel>
                     <GroupBox Header="KM三相表清EEPROM">
-                        <Grid>
+                        <Grid Margin="0,8,0,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
@@ -51,16 +51,16 @@
                                 <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="额定电压"/>
-                                <TextBlock Text="额定电流"/>
-                                <TextBlock Text="最大电流"/>
-                                <TextBlock Text="有功精度等级"/>
-                                <TextBlock Text="无功精度等级"/>
-                                <TextBlock Text="有功脉冲常数"/>
-                                <TextBlock Text="无功脉冲常数"/>
-                                <TextBlock Text="电表型号"/>
-                                <TextBlock Text="生产日期"/>
-                                <TextBlock Text="协议版本号"/>
+                                <TextBlock Text="额定电压：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="额定电流：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="最大电流：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="有功精度等级：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="无功精度等级：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="有功脉冲常数：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="无功脉冲常数：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="电表型号：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="生产日期：" HorizontalAlignment="Right" Margin="0,3"/>
+                                <TextBlock Text="协议版本号：" HorizontalAlignment="Right" Margin="0,3"/>
                             </StackPanel>
                             <StackPanel Orientation="Vertical" Grid.Column="1">
                                 <TextBox>220</TextBox>
@@ -89,22 +89,67 @@
                                     <ComboBoxItem>DL/T645-2007-12</ComboBoxItem>
                                 </ComboBox>
                             </StackPanel>
-                            <Button Grid.Row="1" Grid.ColumnSpan="2" Content="初始化"/>
+                            <Button Grid.Row="1" Grid.ColumnSpan="2" Content="初  始  化"/>
                         </Grid>
                     </GroupBox>
                 </StackPanel>
             </TabItem>
             <TabItem Header="复旦微">
-                
+                <GroupBox Header="开盖条件下">
+                    <StackPanel Orientation="Vertical">
+                        <Button Content="厂内模式使能命令"/>
+                        <Button Content="退出厂内模式命令"/>
+                        <Button Content="初始化命令/清EEP"/>
+                    </StackPanel>
+                </GroupBox>
             </TabItem>
             <TabItem Header="钜泉">
-
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="200" Content="读内部软件版本号"/>
+                        <TextBox Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="200" Content="读 厂 内 模 式"/>
+                        <TextBox Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="200" Content="设 厂 内 模 式"/>
+                        <TextBox Width="200"/>
+                    </StackPanel>
+                    <Button Width="400" Content="参 数 初 始 化"/>
+                </StackPanel>
             </TabItem>
             <TabItem Header="银河龙芯">
-
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="读银河龙芯版本"/>
+                        <TextBox Width="300"/>
+                    </StackPanel>
+                </StackPanel>
             </TabItem>
             <TabItem Header="福建特殊命令">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="福建点对点校时"/>
+                        <TextBox>190305000000</TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="设表时间"/>
+                        <TextBox/>
+                        <Button Content="读表时间"/>
+                    </StackPanel>
+                    
+                    <TextBlock TextWrapping="Wrap">
+                        ERR:
+                        00H:校时时间超过当前时间5分钟；
+                        01H:本日校时次数超过1次；
+                        02H:其他错误情况。
 
+                        1.当地址域为广播地址或表自身一致，且符合5分钟偏差内时，电能表均能执行时间调整。
+                        2.每天总校对时间次数只允许一次(包括地址域为广播地址和表自身地址校时方式)。
+                    </TextBlock>
+                </StackPanel>
             </TabItem>
             <TabItem Header="欣瑞利">
 
@@ -117,12 +162,12 @@
                 </GroupBox>
                 <GroupBox Header="清零">
                     <WrapPanel>
-                        <Button Content="电表清零"/>
-                        <Button Content="事件总清零"/>
-                        <Button Content="最大需量清零"/>
-                        <Button Content="分项事件清零"/>
-                        <TextBox Width="100"/>
-                        <TextBlock Text="DI3 DI2 DI1" VerticalAlignment="Center"/>
+                        <Button Margin="5" Content="电表清零"/>
+                        <Button Margin="5" Content="事件总清零"/>
+                        <Button Margin="5" Content="最大需量清零"/>
+                        <Button Margin="5" Content="分项事件清零"/>
+                        <TextBox Margin="5" Width="100"/>
+                        <TextBlock Margin="5" Text="DI3 DI2 DI1" VerticalAlignment="Center"/>
                     </WrapPanel>
                 </GroupBox>
                 <GroupBox Header="冻结">
@@ -139,12 +184,12 @@
                 </GroupBox>
                 <GroupBox Header="多功能段子控制">
                     <StackPanel Orientation="Horizontal">
-                        <StackPanel Orientation="Vertical">
-                            <RadioButton Content="时钟秒脉冲"/>
+                        <StackPanel Orientation="Vertical" Margin="0,10">
+                            <RadioButton Content="时钟秒脉冲" IsChecked="True"/>
                             <RadioButton Content="需量周期脉冲"/>
                             <RadioButton Content="时段投切脉冲"/>
                         </StackPanel>
-                        <Button Content="设置" Width="80"/>
+                        <Button Content="设置" Width="80" Margin="0,10"/>
                     </StackPanel>
                 </GroupBox>
             </StackPanel>

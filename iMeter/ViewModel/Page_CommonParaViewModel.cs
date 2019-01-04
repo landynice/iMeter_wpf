@@ -66,7 +66,10 @@ namespace iMeter.ViewModel
 		/// <param name="obj"></param>
 		private void Set(object obj)
 		{
-			
-		}
+            //_ret2 = "test";
+            Ret2 = "test";
+            Protocol645 p645 = new Protocol645();
+            p645.WriteData(obj.ToString(), "");
+        }
 	}
 }

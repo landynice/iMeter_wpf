@@ -4,35 +4,22 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:iMeter.View.Pages"
+      
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="880"
+      d:DesignHeight="500" d:DesignWidth="700"
       Title="Page_CommonPara">
 
     <Grid local:GridHelper.ShowBorder="True">
         <Grid.Resources>
-            <Style TargetType="CheckBox">
-                <Setter Property="Width" Value="130"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-            </Style>
             <Style TargetType="TextBox">
                 <Setter Property="Width" Value="80"/>
                 <Setter Property="Height" Value="25"/>
             </Style>
-            <!--“读”按钮-->
             <Style TargetType="Button">
                 <Setter Property="Width" Value="30"/>
-                <Setter Property="Height" Value="30"/>
-                <!--<Setter Property="Template" Value="{StaticResource DefaultButton}"/>-->
                 <Setter Property="Content" Value="读"/>
+                <Setter Property="Template" Value="{StaticResource ButtonLeftCircle}"/>
                 <Setter Property="Command" Value="{Binding BtnRead}"/>
-            </Style>
-            <!--“设”按钮-->
-            <Style TargetType="Button" x:Key="SetBtn">
-                <Setter Property="Width" Value="30"/>
-                <Setter Property="Height" Value="30"/>
-                <!--<Setter Property="Template" Value="{StaticResource ButtonPink}"/>-->
-                <Setter Property="Content" Value="写"/>
-                <Setter Property="Command" Value="{Binding BtnSet}"/>
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
@@ -68,25 +55,27 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <!--第0列-->
-        <CheckBox Grid.Row="0" Grid.Column="0" Content="日期"/>
-        <CheckBox Grid.Row="1" Grid.Column="0" Content="时间"/>
-        <CheckBox Grid.Row="2" Grid.Column="0" Content="表号"/>
-        <CheckBox Grid.Row="3" Grid.Column="0" Content="年时区数"/>
-        <CheckBox Grid.Row="4" Grid.Column="0" Content="日时段表数"/>
-        <CheckBox Grid.Row="5" Grid.Column="0" Content="日时段数"/>
-        <CheckBox Grid.Row="6" Grid.Column="0" Content="费率数"/>
-        <CheckBox Grid.Row="7" Grid.Column="0" Content="每月第1结算日"/>
-        <CheckBox Grid.Row="8" Grid.Column="0" Content="每月第2结算日"/>
-        <CheckBox Grid.Row="9" Grid.Column="0" Content="每月第3结算日"/>
-        <CheckBox Grid.Row="10" Grid.Column="0" Content="时区表切换时间"/>
-        <CheckBox Grid.Row="11" Grid.Column="0" Content="日时段表切换时间"/>
-        <CheckBox Grid.Row="12" Grid.Column="0" Content="阶梯切换时间"/>
-        <CheckBox Grid.Row="13" Grid.Column="0" Content="有功组合方式特征字"/>
-        <CheckBox Grid.Row="14" Grid.Column="0" Content="红外波特率特征字"/>
+        <TextBlock Grid.Row="0" Grid.Column="0">日期</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0">时间</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0">表号</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0">年时区数</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0">日时段表数</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0">日时段数</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="0">费率数</TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="0">每月第1结算日</TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="0">每月第2结算日</TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="0">每月第3结算日</TextBlock>
+        <TextBlock Grid.Row="10" Grid.Column="0">时区表切换时间</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="0">日时段表切换时间</TextBlock>
+        <TextBlock Grid.Row="12" Grid.Column="0">阶梯切换时间</TextBlock>
+        <TextBlock Grid.Row="13" Grid.Column="0">有功组合方式特征字</TextBlock>
+        <TextBlock Grid.Row="14" Grid.Column="0">红外波特率特征字</TextBlock>
         <!--第1列-->
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Ret}"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Ret}" x:Name="tbtest"/>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Ret2}"/>
         <TextBox Grid.Row="2" Grid.Column="1"/>
         <TextBox Grid.Row="3" Grid.Column="1"/>
@@ -102,169 +91,240 @@
         <TextBox Grid.Row="13" Grid.Column="1"/>
         <TextBox Grid.Row="14" Grid.Column="1"/>
         <!--第2列-->
-        <Button Grid.Row="0" Grid.Column="2" CommandParameter="04000101"/>
-        <Button Grid.Row="1" Grid.Column="2" CommandParameter="04000102"/>
-        <Button Grid.Row="2" Grid.Column="2" CommandParameter="04000402"/>
-        <Button Grid.Row="3" Grid.Column="2" CommandParameter="04000201"/>
-        <Button Grid.Row="4" Grid.Column="2" CommandParameter="04000202"/>
-        <Button Grid.Row="5" Grid.Column="2" CommandParameter="04000203"/>
-        <Button Grid.Row="6" Grid.Column="2" CommandParameter="04000204"/>
-        <Button Grid.Row="7" Grid.Column="2" CommandParameter="04000B01"/>
-        <Button Grid.Row="8" Grid.Column="2" CommandParameter="04000B02"/>
-        <Button Grid.Row="9" Grid.Column="2" CommandParameter="04000B03"/>
-        <Button Grid.Row="10" Grid.Column="2" CommandParameter="04000106"/>
-        <Button Grid.Row="11" Grid.Column="2" CommandParameter="04000107"/>
-        <Button Grid.Row="12" Grid.Column="2" CommandParameter="04000109"/>
-        <Button Grid.Row="13" Grid.Column="2" CommandParameter="04000601"/>
-        <Button Grid.Row="14" Grid.Column="2" CommandParameter="04000701"/>
+        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000101"/>
+            <Button CommandParameter="04000101" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000102"/>
+            <Button CommandParameter="04000102" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000402"/>
+            <Button CommandParameter="04000402" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000201"/>
+            <Button CommandParameter="04000201" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000202"/>
+            <Button CommandParameter="04000202" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000203"/>
+            <Button CommandParameter="04000203" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000204"/>
+            <Button CommandParameter="04000204" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="7" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000B01"/>
+            <Button CommandParameter="04000B01" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="8" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000B02"/>
+            <Button CommandParameter="04000B02" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="9" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000B03"/>
+            <Button CommandParameter="04000B03" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="10" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000106"/>
+            <Button CommandParameter="04000106" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="11" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000107"/>
+            <Button CommandParameter="04000107" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="12" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000109"/>
+            <Button CommandParameter="04000109" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="13" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000601"/>
+            <Button CommandParameter="04000601" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="14" Grid.Column="2" Orientation="Horizontal">
+            <Button CommandParameter="04000701"/>
+            <Button CommandParameter="04000701" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
         <!--第3列-->
-        <Button Grid.Row="0" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000101"/>
-        <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000102"/>
-        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000402"/>
-        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000201"/>
-        <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000202"/>
-        <Button Grid.Row="5" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000203"/>
-        <Button Grid.Row="6" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000204"/>
-        <Button Grid.Row="7" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000B01"/>
-        <Button Grid.Row="8" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000B02"/>
-        <Button Grid.Row="9" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000B03"/>
-        <Button Grid.Row="10" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000106"/>
-        <Button Grid.Row="11" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000107"/>
-        <Button Grid.Row="12" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000109"/>
-        <Button Grid.Row="13" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000601"/>
-        <Button Grid.Row="14" Grid.Column="3" Style="{StaticResource SetBtn}" CommandParameter="04000701"/>
+        <Border Grid.RowSpan="15" Grid.Column="3" Background="Black" Margin="5,0"/>
         <!--第4列-->
-        <Border Grid.RowSpan="15" Grid.Column="4" Background="Black" Margin="5,0"/>
+        <TextBlock Grid.Row="0" Grid.Column="4">公共假日数</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="4">阶梯数</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="4">自动循环显示屏数</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="4">每屏显示时间</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="4">显示电能小数位数</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="4">显示功率小数位数</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="4">按键循环显示屏数</TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="4">客户编号</TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="4">整点冻结起始时间</TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="4">整点冻结时间间隔</TextBlock>
+        <TextBlock Grid.Row="10" Grid.Column="4">日冻结时间</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="4">跳闸延时时间</TextBlock>
+        <TextBlock Grid.Row="12" Grid.Column="4">校表脉冲宽度</TextBlock>
+        <TextBlock Grid.Row="13" Grid.Column="4">周休日特征字</TextBlock>
+        <TextBlock Grid.Row="14" Grid.Column="4">周休日采用日时段表号</TextBlock>
         <!--第5列-->
-        <CheckBox Grid.Row="0" Grid.Column="5" Content="公共假日数"/>
-        <CheckBox Grid.Row="1" Grid.Column="5" Content="阶梯数"/>
-        <CheckBox Grid.Row="2" Grid.Column="5" Content="自动循环显示屏数"/>
-        <CheckBox Grid.Row="3" Grid.Column="5" Content="每屏显示时间"/>
-        <CheckBox Grid.Row="4" Grid.Column="5" Content="显示电能小数位数"/>
-        <CheckBox Grid.Row="5" Grid.Column="5" Content="显示功率小数位数"/>
-        <CheckBox Grid.Row="6" Grid.Column="5" Content="按键循环显示屏数"/>
-        <CheckBox Grid.Row="7" Grid.Column="5" Content="客户编号"/>
-        <CheckBox Grid.Row="8" Grid.Column="5" Content="整点冻结起始时间"/>
-        <CheckBox Grid.Row="9" Grid.Column="5" Content="整点冻结时间间隔"/>
-        <CheckBox Grid.Row="10" Grid.Column="5" Content="日冻结时间"/>
-        <CheckBox Grid.Row="11" Grid.Column="5" Content="跳闸延时时间"/>
-        <CheckBox Grid.Row="12" Grid.Column="5" Content="校表脉冲宽度"/>
-        <CheckBox Grid.Row="13" Grid.Column="5" Content="周休日特征字"/>
-        <CheckBox Grid.Row="14" Grid.Column="5" Content="周休日采用日时段表号"/>
+        <TextBox Grid.Row="0" Grid.Column="5"/>
+        <TextBox Grid.Row="1" Grid.Column="5"/>
+        <TextBox Grid.Row="2" Grid.Column="5"/>
+        <TextBox Grid.Row="3" Grid.Column="5"/>
+        <TextBox Grid.Row="4" Grid.Column="5"/>
+        <TextBox Grid.Row="5" Grid.Column="5"/>
+        <TextBox Grid.Row="6" Grid.Column="5"/>
+        <TextBox Grid.Row="7" Grid.Column="5"/>
+        <TextBox Grid.Row="8" Grid.Column="5"/>
+        <TextBox Grid.Row="9" Grid.Column="5"/>
+        <TextBox Grid.Row="10" Grid.Column="5"/>
+        <TextBox Grid.Row="11" Grid.Column="5"/>
+        <TextBox Grid.Row="12" Grid.Column="5"/>
+        <TextBox Grid.Row="13" Grid.Column="5"/>
+        <TextBox Grid.Row="14" Grid.Column="5"/>
         <!--第6列-->
-        <TextBox Grid.Row="0" Grid.Column="6"/>
-        <TextBox Grid.Row="1" Grid.Column="6"/>
-        <TextBox Grid.Row="2" Grid.Column="6"/>
-        <TextBox Grid.Row="3" Grid.Column="6"/>
-        <TextBox Grid.Row="4" Grid.Column="6"/>
-        <TextBox Grid.Row="5" Grid.Column="6"/>
-        <TextBox Grid.Row="6" Grid.Column="6"/>
-        <TextBox Grid.Row="7" Grid.Column="6"/>
-        <TextBox Grid.Row="8" Grid.Column="6"/>
-        <TextBox Grid.Row="9" Grid.Column="6"/>
-        <TextBox Grid.Row="10" Grid.Column="6"/>
-        <TextBox Grid.Row="11" Grid.Column="6"/>
-        <TextBox Grid.Row="12" Grid.Column="6"/>
-        <TextBox Grid.Row="13" Grid.Column="6"/>
-        <TextBox Grid.Row="14" Grid.Column="6"/>
+        <StackPanel Grid.Row="0" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000205"/>
+            <Button CommandParameter="04000205" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="6" Orientation="Horizontal">
+        <Button CommandParameter="04000207"/>
+        <Button CommandParameter="04000207" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000301"/>
+            <Button CommandParameter="04000301" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000302"/>
+            <Button CommandParameter="04000302" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000303"/>
+            <Button CommandParameter="04000303" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000304"/>
+            <Button CommandParameter="04000304" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000305"/>
+            <Button CommandParameter="04000305" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="7" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="0400040E"/>
+            <Button CommandParameter="0400040E" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="8" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04001201"/>
+            <Button CommandParameter="04001201" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="9" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04001202"/>
+            <Button CommandParameter="04001202" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="10" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04001203"/>
+            <Button CommandParameter="04001203" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="11" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04001401"/>
+            <Button CommandParameter="04001401" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="12" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000105"/>
+            <Button CommandParameter="04000105" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="13" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000801"/>
+            <Button CommandParameter="04000801" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="14" Grid.Column="6" Orientation="Horizontal">
+            <Button CommandParameter="04000802"/>
+            <Button CommandParameter="04000802" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
         <!--第7列-->
-        <Button Grid.Row="0" Grid.Column="7" CommandParameter="04000205"/>
-        <Button Grid.Row="1" Grid.Column="7" CommandParameter="04000207"/>
-        <Button Grid.Row="2" Grid.Column="7" CommandParameter="04000301"/>
-        <Button Grid.Row="3" Grid.Column="7" CommandParameter="04000302"/>
-        <Button Grid.Row="4" Grid.Column="7" CommandParameter="04000303"/>
-        <Button Grid.Row="5" Grid.Column="7" CommandParameter="04000304"/>
-        <Button Grid.Row="6" Grid.Column="7" CommandParameter="04000305"/>
-        <Button Grid.Row="7" Grid.Column="7" CommandParameter="0400040E"/>
-        <Button Grid.Row="8" Grid.Column="7" CommandParameter="04001201"/>
-        <Button Grid.Row="9" Grid.Column="7" CommandParameter="04001202"/>
-        <Button Grid.Row="10" Grid.Column="7" CommandParameter="04001203"/>
-        <Button Grid.Row="11" Grid.Column="7" CommandParameter="04001401"/>
-        <Button Grid.Row="12" Grid.Column="7" CommandParameter="04000105"/>
-        <Button Grid.Row="13" Grid.Column="7" CommandParameter="04000801"/>
-        <Button Grid.Row="14" Grid.Column="7" CommandParameter="04000802"/>
+        <Border Grid.RowSpan="15" Grid.Column="7" Background="Black" Margin="5,0"/>
         <!--第8列-->
-        <Button Grid.Row="0" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000205"/>
-        <Button Grid.Row="1" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000207"/>
-        <Button Grid.Row="2" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000301"/>
-        <Button Grid.Row="3" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000302"/>
-        <Button Grid.Row="4" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000303"/>
-        <Button Grid.Row="5" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000304"/>
-        <Button Grid.Row="6" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000305"/>
-        <Button Grid.Row="7" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="0400040E"/>
-        <Button Grid.Row="8" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001201"/>
-        <Button Grid.Row="9" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001202"/>
-        <Button Grid.Row="10" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001203"/>
-        <Button Grid.Row="11" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04001401"/>
-        <Button Grid.Row="12" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000105"/>
-        <Button Grid.Row="13" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000801"/>
-        <Button Grid.Row="14" Grid.Column="8" Style="{StaticResource SetBtn}" CommandParameter="04000802"/>
+        <TextBlock Grid.Row="0" Grid.Column="8">定时冻结模式字</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="8">瞬时冻结模式字</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="8">约定冻结模式字</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="8">整点冻结模式字</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="8">日冻结模式字</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="8">电表运行特征字1</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="8">电表有功常数</TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="8">额定电压(ASCII)</TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="8">额定电流(ASCII)</TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="8">最大电流(ASCII)</TextBlock>
+        <TextBlock Grid.Row="10" Grid.Column="8">电表型号(ASCII)</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="8">生产日期(ASCII)</TextBlock>
+        <TextBlock Grid.Row="12" Grid.Column="8">有功准确度等级(ASCII)</TextBlock>
+        <TextBlock Grid.Row="13" Grid.Column="8">周休日特征字</TextBlock>
+        <TextBlock Grid.Row="14" Grid.Column="8">周休日采用日时段表号</TextBlock>
         <!--第9列-->
-        <Border Grid.RowSpan="15" Grid.Column="9" Background="Black" Margin="5,0"/>
-        <!--第10列-->
-        <CheckBox Grid.Row="0" Grid.Column="10" Content="定时冻结模式字"/>
-        <CheckBox Grid.Row="1" Grid.Column="10" Content="瞬时冻结模式字"/>
-        <CheckBox Grid.Row="2" Grid.Column="10" Content="约定冻结模式字"/>
-        <CheckBox Grid.Row="3" Grid.Column="10" Content="整点冻结模式字"/>
-        <CheckBox Grid.Row="4" Grid.Column="10" Content="日冻结模式字"/>
-        <CheckBox Grid.Row="5" Grid.Column="10" Content="电表运行特征字1"/>
-        <CheckBox Grid.Row="6" Grid.Column="10" Content="电表有功常数"/>
-        <CheckBox Grid.Row="7" Grid.Column="10" Content="额定电压(ASCII)"/>
-        <CheckBox Grid.Row="8" Grid.Column="10" Content="额定电流(ASCII)"/>
-        <CheckBox Grid.Row="9" Grid.Column="10" Content="最大电流(ASCII)"/>
-        <CheckBox Grid.Row="10" Grid.Column="10" Content="电表型号(ASCII)"/>
-        <CheckBox Grid.Row="11" Grid.Column="10" Content="生产日期(ASCII)"/>
-        <CheckBox Grid.Row="12" Grid.Column="10" Content="有功准确度等级(ASCII)"/>
-        <CheckBox Grid.Row="13" Grid.Column="10" Content="周休日特征字"/>
-        <CheckBox Grid.Row="14" Grid.Column="10" Content="周休日采用日时段表号"/>
-        <!--第11列-->
-        <TextBox Grid.Row="0" Grid.Column="11"/>
-        <TextBox Grid.Row="1" Grid.Column="11"/>
-        <TextBox Grid.Row="2" Grid.Column="11"/>
-        <TextBox Grid.Row="3" Grid.Column="11"/>
-        <TextBox Grid.Row="4" Grid.Column="11"/>
-        <TextBox Grid.Row="5" Grid.Column="11"/>
-        <TextBox Grid.Row="6" Grid.Column="11"/>
-        <TextBox Grid.Row="7" Grid.Column="11"/>
-        <TextBox Grid.Row="8" Grid.Column="11"/>
-        <TextBox Grid.Row="9" Grid.Column="11"/>
-        <TextBox Grid.Row="10" Grid.Column="11"/>
-        <TextBox Grid.Row="11" Grid.Column="11"/>
-        <TextBox Grid.Row="12" Grid.Column="11"/>
-        <TextBox Grid.Row="13" Grid.Column="11"/>
-        <TextBox Grid.Row="14" Grid.Column="11"/>
-        <!--第12列-->
-        <Button Grid.Row="0" Grid.Column="12" CommandParameter="04000902"/>
-        <Button Grid.Row="1" Grid.Column="12" CommandParameter="04000903"/>
-        <Button Grid.Row="2" Grid.Column="12" CommandParameter="04000904"/>
-        <Button Grid.Row="3" Grid.Column="12" CommandParameter="04000905"/>
-        <Button Grid.Row="4" Grid.Column="12" CommandParameter="04000906"/>
-        <Button Grid.Row="5" Grid.Column="12" CommandParameter="04001101"/>
-        <Button Grid.Row="6" Grid.Column="12" CommandParameter="04000409"/>
-        <Button Grid.Row="7" Grid.Column="12" CommandParameter="04000404"/>
-        <Button Grid.Row="8" Grid.Column="12" CommandParameter="04000405"/>
-        <Button Grid.Row="9" Grid.Column="12" CommandParameter="04000406"/>
-        <Button Grid.Row="10" Grid.Column="12" CommandParameter="0400040B"/>
-        <Button Grid.Row="11" Grid.Column="12" CommandParameter="0400040C"/>
-        <Button Grid.Row="12" Grid.Column="12" CommandParameter="04000407"/>
-        <Button Grid.Row="13" Grid.Column="12" CommandParameter="04000801"/>
-        <Button Grid.Row="14" Grid.Column="12" CommandParameter="04000802"/>
-        <!--第13列-->
-        <Button Grid.Row="0" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000902"/>
-        <Button Grid.Row="1" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000903"/>
-        <Button Grid.Row="2" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000904"/>
-        <Button Grid.Row="3" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000905"/>
-        <Button Grid.Row="4" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000906"/>
-        <Button Grid.Row="5" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04001101"/>
-        <Button Grid.Row="6" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000409"/>
-        <Button Grid.Row="7" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000404"/>
-        <Button Grid.Row="8" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000405"/>
-        <Button Grid.Row="9" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000406"/>
-        <Button Grid.Row="10" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="0400040B"/>
-        <Button Grid.Row="11" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="0400040C"/>
-        <Button Grid.Row="12" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000407"/>
-        <Button Grid.Row="13" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000801"/>
-        <Button Grid.Row="14" Grid.Column="13" Style="{StaticResource SetBtn}" CommandParameter="04000802"/>
+        <StackPanel Grid.Row="0" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000902"/>
+            <Button CommandParameter="04000902" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000903"/>
+            <Button CommandParameter="04000903" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000904"/>
+            <Button CommandParameter="04000904" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000905"/>
+            <Button CommandParameter="04000905" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000906"/>
+            <Button CommandParameter="04000906" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04001101"/>
+            <Button CommandParameter="04001101" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000409"/>
+            <Button CommandParameter="04000409" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="7" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000404"/>
+            <Button CommandParameter="04000404" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="8" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000405"/>
+            <Button CommandParameter="04000405" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="9" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000406"/>
+            <Button CommandParameter="04000406" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="10" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="0400040B"/>
+            <Button CommandParameter="0400040B" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="11" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="0400040C"/>
+            <Button CommandParameter="0400040C" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="12" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000407"/>
+            <Button CommandParameter="04000407" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="13" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000801"/>
+            <Button CommandParameter="04000801" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="14" Grid.Column="9" Orientation="Horizontal">
+            <Button CommandParameter="04000802"/>
+            <Button CommandParameter="04000802" Content="写" Template="{StaticResource ButtonRightCircle}"/>
+        </StackPanel>
         <!--<StackPanel>
             <Button Command="{Binding btnTest}" Content="test"/>
             <TextBox Text="{Binding Ret}"/>

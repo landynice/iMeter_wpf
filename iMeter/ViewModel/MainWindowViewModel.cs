@@ -45,7 +45,7 @@ namespace iMeter.ViewModel
 		/// </summary>
 		public string Address
         {
-            get { return Protocol645.Addr; }
+            get => Protocol645.Addr;
             set
             {
                 Protocol645.Addr = value;
@@ -58,7 +58,7 @@ namespace iMeter.ViewModel
         /// </summary>
         public string PortName
         {
-            get{ return IProtocol.PortName; }
+            get => IProtocol.PortName;
             set
             {
                 IProtocol.PortName = value;
@@ -71,7 +71,7 @@ namespace iMeter.ViewModel
         /// </summary>
         public int Baudrate
         {
-            get { return IProtocol.BaudRate; }
+            get => IProtocol.BaudRate;
             set
             {
                 IProtocol.BaudRate = value;
@@ -84,7 +84,7 @@ namespace iMeter.ViewModel
 		/// </summary>
 		public string OperCode
 		{
-			get { return Protocol645.OprCode; }
+			get => Protocol645.OprCode;
 			set
 			{
 				Protocol645.OprCode = value;
@@ -97,7 +97,7 @@ namespace iMeter.ViewModel
 		/// </summary>
 		public string Psw
 		{
-			get { return Protocol645.Psw; }
+			get => Protocol645.Psw;
 			set
 			{
 				Protocol645.Psw = value;

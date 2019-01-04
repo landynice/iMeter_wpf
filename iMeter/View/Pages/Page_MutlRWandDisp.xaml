@@ -37,8 +37,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="10,5,0,0">
-            <TextBox Width="100"/>
-            <Button/>
+            <TextBox x:Name="tbId1" Width="100"/>
+            <Button Tag="{Binding ElementName=tbId1, Path=Text}" Command="{Binding BtnRead}"/>
             <Button Style="{StaticResource SetBtn}"/>
         </StackPanel>
         <GroupBox Grid.Row="1" Grid.Column="0" Header="字节数:0">

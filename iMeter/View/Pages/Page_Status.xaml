@@ -1,0 +1,108 @@
+﻿<Page x:Class="iMeter.View.Pages.Page_Status"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:iMeter.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="700"
+      Title="Page_Status">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <GroupBox Header="电表运行状态字">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Vertical">
+                        <Button Content="电表运行状态字1"/>
+                        <Button Content="电表运行状态字2"/>
+                        <Button Content="电表运行状态字3"/>
+                        <Button Content="电表运行状态字4"/>
+                        <Button Content="电表运行状态字5"/>
+                        <Button Content="电表运行状态字6"/>
+                        <Button Content="电表运行状态字7"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Vertical">
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="特征字/模式字" Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Vertical">
+                        <Button Content="有功组合特征字"/>
+                        <Button Content="无功组合1特征字"/>
+                        <Button Content="无功组合2特征字"/>
+                        <Button Content="周休日特征字"/>
+                        <Button Content="负荷记录模式字"/>
+                        <Button Content="定时冻结模式字"/>
+                        <Button Content="电表运行特征字1"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Vertical">
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                        <TextBox Width="60"/>
+                    </StackPanel>
+                </Grid>
+
+            </GroupBox>
+            <GroupBox Grid.Row="1" Grid.ColumnSpan="2">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="读主动上报模式字"/>
+                        <TextBox/>
+                        <Button Content="写主动上报模式字"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="主动上报状态字"/>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="复位主动上报状态字"/>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="插卡状态字"/>
+                        <TextBox/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="密钥状态字"/>
+                        <TextBox/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <DataGrid Grid.Column="1">
+            
+        </DataGrid>
+    </Grid>
+</Page>
